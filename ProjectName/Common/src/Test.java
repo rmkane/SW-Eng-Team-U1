@@ -1,3 +1,5 @@
+// http://www.dannyfowler.com/?q=installJOGL
+
 public class Test {
 	public static void main(String[] args) {
 		Point p1 = new Point(34, 29, 5);

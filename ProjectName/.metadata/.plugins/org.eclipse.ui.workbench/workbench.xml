@@ -23,6 +23,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -51,7 +52,7 @@
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" partName="Test.java" path="C:/Users/RMKane/SW-Eng-Team-U1/ProjectName/Common/src/Test.java" title="Test.java" tooltip="Common/src/Test.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Common/src/Test.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="255" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="44" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Point.java" partName="Point.java" path="C:/Users/RMKane/SW-Eng-Team-U1/ProjectName/Common/src/Point.java" title="Point.java" tooltip="Common/src/Point.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Common/src/Point.java"/>
@@ -287,13 +288,8 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Common/src/Shape3D.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Common/src/Point.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Common/src/Test.java"/>
+<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=Common/C:\/Users\/RMKane\/SW-Eng-Team-U1\/ProjectName\/jogl\/jar\/gluegen-gl.jar&lt;com.jogamp.gluegen.opengl(BuildComposablePipeline.class"/>
 </editors>
-<item historyLabel="MidPoint.java" index="1">
-<position info="not_deleted" x="203" y="0"/>
-</item>
-<item historyLabel="MidPoint.java" index="1">
-<position info="not_deleted" x="259" y="0"/>
-</item>
 <item historyLabel="MidPoint.java" index="1">
 <position info="not_deleted" x="338" y="0"/>
 </item>
@@ -435,8 +431,14 @@
 <item historyLabel="Point.java" index="5">
 <position info="not_deleted" x="452" y="0"/>
 </item>
-<item active="true" historyLabel="Test.java" index="6">
+<item historyLabel="Test.java" index="6">
 <position info="not_deleted" x="204" y="0"/>
+</item>
+<item historyLabel="BuildComposablePipeline.class" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="Test.java" index="6">
+<position info="not_deleted" x="303" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -455,6 +457,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="BuildComposablePipeline.class" tooltip="com.jogamp.gluegen.opengl.BuildComposablePipeline">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=Common/C:\/Users\/RMKane\/SW-Eng-Team-U1\/ProjectName\/jogl\/jar\/gluegen-gl.jar&lt;com.jogamp.gluegen.opengl(BuildComposablePipeline.class"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Shape3D.java" tooltip="Common/src/Shape3D.java">
 <persistable path="/Common/src/Shape3D.java"/>
 </file>
