@@ -1,0 +1,75 @@
+import javax.media.opengl.*;
+import javax.media.opengl.glu.GLU;
+
+// If thise does not work, try net.java.games.jogl.*, or get the newest version of JOGL.
+public class GameGLEventListener implements GLEventListener {
+	float rotate = 0;
+
+	// Only put stuff here that should happen once, at the beginning of the
+	// program
+	public void init(GLDrawable gld) {
+		GL gl = gld.getGL();
+		GLU glu = gld.getGLU();
+		gl.glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+		gl.glViewport(0, 0, 500, 300);
+		gl.glMatrixMode(GL.GL_PROJECTION);
+		gl.glLoadIdentity();
+		glu.gluPerspective(45.0f, 800.0f / 600.0f, 1.0f, 500.0f);
+		gl.glMatrixMode(GL.GL_MODELVIEW);
+	}
+
+	// This function will get called repeatedly by the Animator. Think of it as
+	// your game loop.
+	public void display(GLDrawable gld) {
+		GL gl = gld.getGL();
+		gl.glClear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT);
+		gl.glLoadIdentity();
+		gl.glTranslatef(0.0f, 0.0f, -5f);
+		gl.glRotatef(rotate, 0.0f, 0.0f, 1.0f);
+		gl.glBegin(GL.GL_TRIANGLES);
+		gl.glVertex3f(0.0f, 1.5f, 0.0f);
+		gl.glVertex3f(-1.0f, -1.0f, 0.0f);
+		gl.glVertex3f(1.0f, -1.0f, 0.0f);
+		gl.glEnd();
+		rotate = rotate + 0.5f;
+	}
+
+	// This function is only called when the window is reshaped. You probably
+	// won't need this.
+	public void reshape(GLDrawable drawable, int x, int y, int width, int height) {
+	}
+
+	// This function is only called when the display settings are changed.
+	// Again, not often used.
+	public void displayChanged(GLDrawable drawable, boolean a, boolean b) {
+	}
+
+	@Override
+	public void display(GLAutoDrawable drawable) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void dispose(GLAutoDrawable drawable) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void init(GLAutoDrawable drawable) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void reshape(GLAutoDrawable drawable, int x, int y, int width,
+			int height) {
+		// TODO Auto-generated method stub
+		
+	}
+}
+// If the code in the functions looks familiar, it's because I've borrowed, and
+// adapted it from another page in the wiki. It just goes to show that whatever
+// can be done with a C OpenGL game can (probably) be done with a Java OpenGL
+// game too. And since OpenGL is OpenGL, the speeds should be very close.

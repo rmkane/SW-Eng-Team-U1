@@ -1,0 +1,25 @@
+import java.awt.Color;
+import java.awt.Frame;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
+
+import javax.media.opengl.GLCapabilities;
+import javax.media.opengl.GLDrawableFactory;
+import javax.media.opengl.GLProfile;
+import javax.media.opengl.awt.GLCanvas;
+
+public class JOGLApp extends JFrame{
+	public static void main(String[] args) {
+		final JOGLApp app = new JOGLApp();
+			// Creates the window in another thread SwingUtilities.invokeLater ( new Runnable() { public void run() { // Removes the normal title bar. Most games do this. app.setUndecorated(true); app.setVisible(true);
+			// Goes into fullscreen-exclusive mode GraphicsDevice gd = GraphicsEnvironment. getLocalGraphicsEnvironment().getDefaultScreenDevice(); gd.setFullScreenWindow(app); } } );
+			// Starts the Animator in a new thread. SwingUtilities.invokeLater ( new Runnable() { public void run() { anim.start(); } } ); }
+			public JOGLApp() { // Set the JFrame title super("JOGL Application");
+			// Kill the process when the JFrame is closed setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			GLCapabilities glCaps = new GLCapabilities(); GLCanvas glCanvas = new GLCanvas(glCaps); glCanvas.addGLEventListener(new GameGLEventListener());
+			// Add the GLCanvas just like we would any Component getContentPane().add(glCanvas, BorderLayout.CENTER);
+			anim = new Animator(glCanvas);
+			
+	    
+	}
+}
