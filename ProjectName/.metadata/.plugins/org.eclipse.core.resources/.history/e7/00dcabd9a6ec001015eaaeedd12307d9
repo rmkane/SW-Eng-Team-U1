@@ -1,0 +1,82 @@
+public class Shape3D {
+
+	private double posX, posY, posZ;
+	private double length, width, height;
+	private double faceColor, edgeColor, edgeWeight;
+	
+	public Shape3D() {
+		
+	}
+
+	public double getPosX() {
+		return posX;
+	}
+
+	protected void setPosX(double posX) {
+		this.posX = posX;
+	}
+
+	public double getPosY() {
+		return posY;
+	}
+
+	protected void setPosY(double posY) {
+		this.posY = posY;
+	}
+
+	public double getPosZ() {
+		return posZ;
+	}
+
+	protected void setPosZ(double posZ) {
+		this.posZ = posZ;
+	}
+
+	public double getLength() {
+		return length;
+	}
+
+	protected void setLength(double length) {
+		this.length = length;
+	}
+
+	public double getWidth() {
+		return width;
+	}
+
+	protected void setWidth(double width) {
+		this.width = width;
+	}
+
+	public double getHeight() {
+		return height;
+	}
+
+	protected void setHeight(double height) {
+		this.height = height;
+	}
+
+	public double getFaceColor() {
+		return faceColor;
+	}
+
+	protected void setFaceColor(double faceColor) {
+		this.faceColor = faceColor;
+	}
+
+	public double getEdgeColor() {
+		return edgeColor;
+	}
+
+	protected void setEdgeColor(double edgeColor) {
+		this.edgeColor = edgeColor;
+	}
+
+	public double getEdgeWeight() {
+		return edgeWeight;
+	}
+
+	protected void setEdgeWeight(double edgeWeight) {
+		this.edgeWeight = edgeWeight;
+	}
+}
