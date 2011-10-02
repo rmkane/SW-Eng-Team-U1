@@ -1,5 +1,5 @@
 public class Point {
-	private int x, y, z;
+	private double x, y, z;
 
 	public Point() {
 		setX(0);
@@ -7,37 +7,37 @@ public class Point {
 		setZ(0);
 	}
 
-	public Point(int x, int y, int z) {
+	public Point(double x, double y, double z) {
 		setX(x);
 		setY(y);
 		setZ(z);
 	}
 
-	public int getX() {
+	public double getX() {
 		return x;
 	}
 
-	public void setX(int x) {
+	public void setX(double x) {
 		this.x = x;
 	}
 
-	public int getY() {
+	public double getY() {
 		return y;
 	}
 
-	public void setY(int y) {
+	public void setY(double y) {
 		this.y = y;
 	}
 
-	public int getZ() {
+	public double getZ() {
 		return z;
 	}
 
-	public void setZ(int z) {
+	public void setZ(double z) {
 		this.z = z;
 	}
 
 	public String toString() {
-		return String.format("(%d, %d, %d)", x, y, z);
+		return String.format("(%.2f, %.2f, %.2f)", x, y, z);
 	}
 }

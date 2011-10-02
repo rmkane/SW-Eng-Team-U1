@@ -1,0 +1,15 @@
+
+public class MidPoint {
+	
+	private Point p1, p2, mp;
+	
+	public MidPoint() {
+		p1 = new Point(0,0,0);
+		p2 = new Point(0,0,0);
+		mp = new Point(0,0,0);
+	}
+	
+	public Midpoint() {
+		
+	}
+}

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="31" version="2.0">
+<workbench progressCount="26" version="2.0">
 <workbenchAdvisor/>
-<window height="768" width="1024" x="175" y="175">
+<window height="768" width="1024" x="118" y="106">
 <fastViewData fastViewLocation="1024">
 <orientation position="512" view="com.vp.vpsde.ec.views.PropertyPaneView"/>
 <orientation position="512" view="com.vp.vpsde.ec.views.PreviewPaneView"/>
@@ -39,17 +39,22 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
+<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Point.java" partName="Point.java" path="C:/Users/RMKane/SW-Eng-Team-U1/ProjectName/src/Point.java" title="Point.java" tooltip="ProjectName/src/Point.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ProjectName/src/Point.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="208" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MidPoint.java" partName="MidPoint.java" path="C:/Users/RMKane/SW-Eng-Team-U1/ProjectName/Common/src/MidPoint.java" title="MidPoint.java" tooltip="Common/src/MidPoint.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Common/src/MidPoint.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="186" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" partName="Test.java" path="C:/Users/RMKane/SW-Eng-Team-U1/ProjectName/src/Test.java" title="Test.java" tooltip="ProjectName/src/Test.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ProjectName/src/Test.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="95" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" partName="Test.java" path="C:/Users/RMKane/SW-Eng-Team-U1/ProjectName/Common/src/Test.java" title="Test.java" tooltip="Common/src/Test.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Common/src/Test.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="255" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Point.java" partName="Point.java" path="C:/Users/RMKane/SW-Eng-Team-U1/ProjectName/Common/src/Point.java" title="Point.java" tooltip="Common/src/Point.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Common/src/Point.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="428" selectionTopPixel="130"/>
 </editor>
 </editors>
 <views>
@@ -59,7 +64,11 @@
 <view id="com.vp.vpsde.ec.views.PropertyPaneView" partName="Property"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<columnWidths org.eclipse.ui.ide.locationField="64" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.resourceField="94" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+<expanded>
+<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -71,7 +80,7 @@
 <viewState/>
 </view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
-<viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="">
+<viewState group_libraries="1" layout="2" linkWithEditor="1" rootMode="1" workingSetName="">
 <customFilters userDefinedPatternsEnabled="false">
 <xmlDefinedFilters>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
@@ -269,6 +278,10 @@
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ProjectName/src/Point.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ProjectName/src/Test.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ProjectName/src/Point.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Common/src/MidPoint.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Common/src/Test.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Common/src/Point.java"/>
 </editors>
 <item historyLabel="Point.java" index="0">
 <position info="not_deleted" x="0" y="0"/>
@@ -297,8 +310,116 @@
 <item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="93" y="0"/>
 </item>
-<item active="true" historyLabel="Test.java" index="1">
+<item historyLabel="Test.java" index="1">
 <position info="not_deleted" x="132" y="0"/>
+</item>
+<item historyLabel="Point.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="MidPoint.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="MidPoint.java" index="3">
+<position info="not_deleted" x="203" y="0"/>
+</item>
+<item historyLabel="MidPoint.java" index="3">
+<position info="not_deleted" x="259" y="0"/>
+</item>
+<item historyLabel="MidPoint.java" index="3">
+<position info="not_deleted" x="338" y="0"/>
+</item>
+<item historyLabel="MidPoint.java" index="3">
+<position info="not_deleted" x="391" y="0"/>
+</item>
+<item historyLabel="Point.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Test.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Test.java" index="4">
+<position info="not_deleted" x="174" y="0"/>
+</item>
+<item historyLabel="Test.java" index="4">
+<position info="not_deleted" x="246" y="0"/>
+</item>
+<item historyLabel="Test.java" index="4">
+<position info="not_deleted" x="246" y="0"/>
+</item>
+<item historyLabel="MidPoint.java" index="3">
+<position info="not_deleted" x="333" y="0"/>
+</item>
+<item historyLabel="Test.java" index="4">
+<position info="not_deleted" x="246" y="0"/>
+</item>
+<item historyLabel="MidPoint.java" index="3">
+<position info="not_deleted" x="394" y="0"/>
+</item>
+<item historyLabel="Test.java" index="4">
+<position info="not_deleted" x="246" y="0"/>
+</item>
+<item historyLabel="MidPoint.java" index="3">
+<position info="not_deleted" x="391" y="0"/>
+</item>
+<item historyLabel="Test.java" index="4">
+<position info="not_deleted" x="204" y="0"/>
+</item>
+<item historyLabel="MidPoint.java" index="3">
+<position info="not_deleted" x="391" y="0"/>
+</item>
+<item historyLabel="MidPoint.java" index="3">
+<position info="not_deleted" x="370" y="0"/>
+</item>
+<item historyLabel="MidPoint.java" index="3">
+<position info="not_deleted" x="387" y="0"/>
+</item>
+<item historyLabel="MidPoint.java" index="3">
+<position info="not_deleted" x="272" y="0"/>
+</item>
+<item historyLabel="Test.java" index="4">
+<position info="not_deleted" x="233" y="0"/>
+</item>
+<item historyLabel="MidPoint.java" index="3">
+<position info="not_deleted" x="225" y="0"/>
+</item>
+<item historyLabel="Test.java" index="4">
+<position info="not_deleted" x="233" y="0"/>
+</item>
+<item historyLabel="MidPoint.java" index="3">
+<position info="not_deleted" x="225" y="0"/>
+</item>
+<item historyLabel="Test.java" index="4">
+<position info="not_deleted" x="233" y="0"/>
+</item>
+<item historyLabel="MidPoint.java" index="3">
+<position info="not_deleted" x="225" y="0"/>
+</item>
+<item historyLabel="Test.java" index="4">
+<position info="not_deleted" x="233" y="0"/>
+</item>
+<item historyLabel="MidPoint.java" index="3">
+<position info="not_deleted" x="225" y="0"/>
+</item>
+<item historyLabel="Point.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Point.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="MidPoint.java" index="3">
+<position info="not_deleted" x="225" y="0"/>
+</item>
+<item historyLabel="Point.java" index="5">
+<position info="not_deleted" x="428" y="0"/>
+</item>
+<item historyLabel="Test.java" index="4">
+<position info="not_deleted" x="255" y="0"/>
+</item>
+<item historyLabel="MidPoint.java" index="3">
+<position info="not_deleted" x="186" y="0"/>
+</item>
+<item active="true" historyLabel="Test.java" index="4">
+<position info="not_deleted" x="255" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -317,6 +438,15 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Point.java" tooltip="Common/src/Point.java">
+<persistable path="/Common/src/Point.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" tooltip="Common/src/Test.java">
+<persistable path="/Common/src/Test.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MidPoint.java" tooltip="Common/src/MidPoint.java">
+<persistable path="/Common/src/MidPoint.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" tooltip="ProjectName/src/Test.java">
 <persistable path="/ProjectName/src/Test.java"/>
 </file>
