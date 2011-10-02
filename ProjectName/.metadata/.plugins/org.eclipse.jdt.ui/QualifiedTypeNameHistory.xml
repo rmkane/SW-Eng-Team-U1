@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.awt.Color"/>
+<fullyQualifiedTypeName name="java.awt.Frame"/>
+<fullyQualifiedTypeName name="javax.media.opengl.awt.GLCanvas"/>
+<fullyQualifiedTypeName name="javax.media.opengl.GLCapabilities"/>
+<fullyQualifiedTypeName name="javax.media.opengl.GLDrawableFactory"/>
+<fullyQualifiedTypeName name="javax.media.opengl.GLProfile"/>
+<fullyQualifiedTypeName name="java.awt.event.WindowAdapter"/>
+<fullyQualifiedTypeName name="java.awt.event.WindowEvent"/>
 </qualifiedTypeNameHistroy>
