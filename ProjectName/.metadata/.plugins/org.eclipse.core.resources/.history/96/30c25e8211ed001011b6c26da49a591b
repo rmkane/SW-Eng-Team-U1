@@ -37,8 +37,8 @@ public class JOGLQuad implements GLEventListener, KeyListener {
 
 		// rotate on the three axis
 		gl.glRotatef(rotateT, 1.0f, 0.0f, 0.0f); // x - roll
-		gl.glRotatef(rotateT, 0.0f, 1.0f, 0.0f); // y - yaw
-		gl.glRotatef(rotateT, 0.0f, 0.0f, 1.0f); // z - pitch
+		//gl.glRotatef(rotateT, 0.0f, 1.0f, 0.0f); // y - yaw
+		//gl.glRotatef(rotateT, 0.0f, 0.0f, 1.0f); // z - pitch
 
 		// Draw A Quad
 		gl.glBegin(GL2.GL_QUADS);

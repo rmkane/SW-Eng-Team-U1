@@ -36,13 +36,13 @@ public class JOGLQuad implements GLEventListener, KeyListener {
 		gl.glTranslatef(0.0f, 0.0f, -5.0f);
 
 		// rotate on the three axis
-		gl.glRotatef(rotateT, 1.0f, 0.0f, 0.0f); // x - roll
-		gl.glRotatef(rotateT, 0.0f, 1.0f, 0.0f); // y - yaw
-		gl.glRotatef(rotateT, 0.0f, 0.0f, 1.0f); // z - pitch
+		gl.glRotatef(rotateT, 1.0f, 0.0f, 0.0f);
+		gl.glRotatef(rotateT, 0.0f, 1.0f, 0.0f);
+		gl.glRotatef(rotateT, 0.0f, 0.0f, 1.0f);
 
 		// Draw A Quad
 		gl.glBegin(GL2.GL_QUADS);
-		gl.glColor3f(0.75f, 1.0f, 0.0f); // set the color of the quad
+		gl.glColor3f(0.2f, 0.7f, 1.0f); // set the color of the quad
 		gl.glVertex3f(-1.0f, 1.0f, 0.0f); // Top Left
 		gl.glVertex3f(1.0f, 1.0f, 0.0f); // Top Right
 		gl.glVertex3f(1.0f, -1.0f, 0.0f); // Bottom Right
