@@ -17,7 +17,7 @@ public class Point {
 		return x;
 	}
 
-	protected void setX(double x) {
+	public void setX(double x) {
 		this.x = x;
 	}
 
@@ -25,7 +25,7 @@ public class Point {
 		return y;
 	}
 
-	protected void setY(double y) {
+	public void setY(double y) {
 		this.y = y;
 	}
 
@@ -33,7 +33,7 @@ public class Point {
 		return z;
 	}
 
-	protected void setZ(double z) {
+	public void setZ(double z) {
 		this.z = z;
 	}
 
