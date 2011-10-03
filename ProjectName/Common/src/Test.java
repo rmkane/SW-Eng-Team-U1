@@ -1,5 +1,5 @@
 // http://www.dannyfowler.com/?q=installJOGL\
-// Showed Donald this link ^
+// Showed Donald this link ^^^
 
 public class Test {
 	public static void main(String[] args) {

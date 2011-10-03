@@ -1,7 +1,0 @@
-public class Test {
-	public static void main(String[] args) {
-		Point p1 = new Point(34, 29, 5);
-		Point p2 = new Point(-35, -19, -37);
-		//MidPoint p3 = new MidPoint(p1, p2);
-	}
-}
