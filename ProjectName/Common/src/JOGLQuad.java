@@ -40,7 +40,7 @@ public class JOGLQuad implements GLEventListener, KeyListener {
 		gl.glRotatef(rotateT, 0.0f, 1.0f, 0.0f); // y - yaw
 		gl.glRotatef(rotateT, 0.0f, 0.0f, 1.0f); // z - pitch
 
-		// Draw A Quad
+		// Draw A Quad		
 		gl.glBegin(GL2.GL_QUADS);
 		gl.glColor3f(0.75f, 1.0f, 0.0f); // set the color of the quad
 		gl.glVertex3f(-1.0f, 1.0f, 0.0f); // Top Left
