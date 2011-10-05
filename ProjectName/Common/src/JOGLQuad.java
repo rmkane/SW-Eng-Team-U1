@@ -17,7 +17,12 @@ import javax.media.opengl.glu.GLU;
 
 import com.jogamp.opengl.util.Animator;
 
+<<<<<<< HEAD
 //ABC123
+=======
+// Imported from local libraries
+
+>>>>>>> 6c2b2333f9f4992cc370788ddeb110c26e51b121
 public class JOGLQuad implements GLEventListener, KeyListener {
 	float rotateT = 0.0f;
 
@@ -40,7 +45,7 @@ public class JOGLQuad implements GLEventListener, KeyListener {
 		gl.glRotatef(rotateT, 1.0f, 0.0f, 0.0f); // x - roll
 		gl.glRotatef(rotateT, 0.0f, 1.0f, 0.0f); // y - yaw
 		gl.glRotatef(rotateT, 0.0f, 0.0f, 1.0f); // z - pitch
-			//Donald is adding a comment<<here
+		
 		// Draw A Quad		
 		gl.glBegin(GL2.GL_QUADS);
 		gl.glColor3f(0.75f, 1.0f, 0.0f); // set the color of the quad
