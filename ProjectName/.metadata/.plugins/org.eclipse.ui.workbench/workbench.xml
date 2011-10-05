@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="27" version="2.0">
+<workbench progressCount="32" version="2.0">
 <workbenchAdvisor/>
 <window height="912" width="960" x="288" y="3">
 <fastViewData fastViewLocation="1024">
@@ -10,13 +10,13 @@
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
-<coolbarLayout>
+<coolbarLayout locked="0">
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="285" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="308" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="122" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="130" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -27,6 +27,10 @@
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem itemType="typeToolBarContribution" x="137" y="22"/>
+<coolItem itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
 <page aggregateWorkingSetId="Aggregate for window 1317689392324" focus="true" label="Workspace - Java">
 <editors>
@@ -41,9 +45,9 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JOGLQuad.java" partName="JOGLQuad.java" path="C:/Users/Donald/Documents/Hood College/Senior Year 2011-2012/U1/SW-Eng-Team-U1/ProjectName/Common/src/JOGLQuad.java" title="JOGLQuad.java" tooltip="Common/src/JOGLQuad.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JOGLQuad.java" partName="JOGLQuad.java" path="C:/Users/RMKane/SW-Eng-Team-U1/ProjectName/Common/src/JOGLQuad.java" title="JOGLQuad.java" tooltip="Common/src/JOGLQuad.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Common/src/JOGLQuad.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1363" selectionTopPixel="90"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="631" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.ui.DefaultTextEditor" name="INFO" partName="INFO" path="C:/Users/RMKane/SW-Eng-Team-U1/ProjectName/Common/INFO" title="INFO" tooltip="Common/INFO" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Common/INFO"/>
@@ -57,8 +61,7 @@
 <views>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings"/>
+<expanded>&#x0A;<category IMemento.internal.id="Warnings"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="64" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.resourceField="94" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -95,7 +98,6 @@
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
 <child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
-<child filterId="org.eclipse.m2e.MavenModuleFilter" isEnabled="false"/>
 </xmlDefinedFilters>
 </customFilters>
 </viewState>
@@ -111,7 +113,6 @@
 <sort4 sortDirection="1" sortKey="NONE"/>
 <sort5 sortDirection="1" sortKey="NONE"/>
 <sort6 sortDirection="1" sortKey="NONE"/>
-<sort7 sortDirection="1" sortKey="NONE"/>
 </sorter>
 </sorter>
 <filteredTreeFindHistory/>
@@ -144,8 +145,7 @@
 <alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
-<alwaysOnActionSet id="org.eclipse.egit.ui.navigation"/>
-<alwaysOnActionSet id="org.eclipse.wb.core.ui.actionset"/>
+<alwaysOnActionSet id="com.vp.vpsde.ec.actions.GeneralActionSet"/>
 <show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
 <show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
 <show_view_action id="org.eclipse.jdt.ui.SourceView"/>
@@ -284,8 +284,11 @@
 <item historyLabel="Test.java" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item active="true" historyLabel="JOGLQuad.java" index="4">
+<item historyLabel="JOGLQuad.java" index="4">
 <position info="not_deleted" x="2978" y="0"/>
+</item>
+<item active="true" historyLabel="JOGLQuad.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -294,7 +297,6 @@
 <actionBarAdvisor/>
 <trimLayout>
 <trimArea IMemento.internal.id="128">
-<trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
 <trimArea IMemento.internal.id="1024">
