@@ -17,6 +17,8 @@ import javax.media.opengl.glu.GLU;
 
 import com.jogamp.opengl.util.Animator;
 
+
+//ABC123
 // Imported from local libraries
 
 public class JOGLQuad implements GLEventListener, KeyListener {
@@ -49,7 +51,6 @@ public class JOGLQuad implements GLEventListener, KeyListener {
 		gl.glVertex3f(1.0f, 1.0f, 0.0f); // Top Right
 		gl.glVertex3f(1.0f, -1.0f, 0.0f); // Bottom Right
 		gl.glVertex3f(-1.0f, -1.0f, 0.0f); // Bottom Left
-		
 		// Done Drawing The Quad
 		gl.glEnd();
 
