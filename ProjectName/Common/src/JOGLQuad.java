@@ -42,19 +42,42 @@ public class JOGLQuad implements GLEventListener, KeyListener {
 		gl.glRotatef(rotateT, 0.0f, 1.0f, 0.0f); // y - yaw
 		gl.glRotatef(rotateT, 0.0f, 0.0f, 1.0f); // z - pitch
 		
-		// Draw A Quad		
-		gl.glBegin(GL2.GL_QUADS);
-		gl.glColor3f(0.75f, 1.0f, 0.0f); // set the color of the quad
-		gl.glVertex3f(-1.0f, 1.0f, 0.0f); // Top Left
-		gl.glVertex3f(1.0f, 1.0f, 0.0f); // Top Right
-		gl.glVertex3f(1.0f, -1.0f, 0.0f); // Bottom Right
-		gl.glVertex3f(-1.0f, -1.0f, 0.0f); // Bottom Left
+		// Awesome! [http://www.falloutsoftware.com/tutorials/gl/gl3.htm] -Ryan
+	    
+		/** Draw Triangles */
+		gl.glBegin(GL2.GL_TRIANGLES); // Begin Larger Triangle
+		gl.glVertex3f(-1.0f, -0.5f, -4.0f); // Lower left vertex
+	    gl.glColor3f(1.0f, 0.0f, 0.0f); // Red
+	    gl.glVertex3f( 1.0f, -0.5f, -4.0f); // Lower right vertex
+	    gl.glColor3f(0.0f, 1.0f, 0.0f); // Green
+	    gl.glVertex3f( 0.0f,  0.5f, -4.0f); // Upper vertex
+	    gl.glColor3f(1.0f, 0.0f, 1.0f); // Magenta
+	    gl.glEnd(); // Done Drawing Larger Triangle
+	    
+	    gl.glBegin(GL2.GL_TRIANGLES); // Begin Smaller Triangle
+	    gl.glVertex3f(-0.5f, -1.5f, -4.0f); // Lower left vertex
+	    gl.glColor3f(1.0f, 1.0f, 0.0f); // Yellow
+	    gl.glVertex3f( 0.5f, -1.5f, -4.0f); // Lower right vertex
+	    gl.glColor3f(0.0f, 1.0f, 1.0f); // Cyan
+	    gl.glVertex3f( 0.0f, -1.0f, -4.0f); // Upper vertex
+	    gl.glColor3f(0.0f, 0.0f, 1.0f); // Blue
+	    gl.glEnd(); // Done Drawing Smaller Triangle
 		
-		// Done Drawing The Quad
-		gl.glEnd();
-
+		
+		/** Draw A Quad	*/	
+		gl.glBegin(GL2.GL_QUADS);
+		gl.glVertex3f(-0.5f, 0.5f, 0.0f); // Top Left
+		gl.glColor3f(1.0f, 0.0f, 0.0f); // Red
+		gl.glVertex3f(0.5f, 0.5f, 0.0f); // Top Right
+		gl.glColor3f(1.0f, 1.0f, 0.0f); // Yellow
+		gl.glVertex3f(0.5f, -0.5f, 0.0f); // Bottom Right
+		gl.glColor3f(0.0f, 1.0f, 0.0f); // Green
+		gl.glVertex3f(-0.5f, -0.5f, 0.0f); // Bottom Left
+		gl.glColor3f(0.0f, 0.0f, 1.0f); // Blue
+		gl.glEnd(); // Done Drawing The Quad
+		
 		// increasing rotation for the next iteration
-		rotateT += 0.2f;
+		rotateT += 0.5f;
 	}
 
 	public void displayChanged(GLAutoDrawable gLDrawable, boolean modeChanged,
