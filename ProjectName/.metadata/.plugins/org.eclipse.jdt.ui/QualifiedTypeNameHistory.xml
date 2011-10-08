@@ -12,4 +12,5 @@
 <fullyQualifiedTypeName name="javax.swing.JMenu"/>
 <fullyQualifiedTypeName name="com.jogamp.opengl.util.gl2.GLUT"/>
 <fullyQualifiedTypeName name="javax.media.opengl.awt.GLJPanel"/>
+<fullyQualifiedTypeName name="java.awt.Color"/>
 </qualifiedTypeNameHistroy>

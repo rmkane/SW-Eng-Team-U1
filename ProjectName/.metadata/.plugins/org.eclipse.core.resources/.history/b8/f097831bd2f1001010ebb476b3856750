@@ -26,7 +26,7 @@ public class JOGLTest implements GLEventListener, KeyListener {
 	static Frame frame = new Frame("Jogl Quad drawing");
 	static Animator animator = new Animator(canvas);
 
-	// Color Palette
+	// Colors
 	private final Color BLACK = new Color(0, 0, 0);
 	private final Color RED = new Color(255, 0, 0);
 	private final Color GREEN = new Color(0, 255, 0);
@@ -44,12 +44,11 @@ public class JOGLTest implements GLEventListener, KeyListener {
 	public void drawTriangle(GL2 gl2, Point p1, Point p2, Point p3, Color color) {
 		final GL2 gl = gl2.getGL().getGL2();
 		gl.glBegin(GL2.GL_TRIANGLES); // Begin Drawing
-		gl.glColor3f((float) (color.getRed() / 255),
-				(float) (color.getGreen() / 255),
-				(float) (color.getBlue() / 255)); // Red
 		gl.glVertex3f((float) p1.getX(), (float) p1.getY(), (float) p1.getZ());
 		gl.glVertex3f((float) p2.getX(), (float) p2.getY(), (float) p2.getZ());
 		gl.glVertex3f((float) p3.getX(), (float) p3.getY(), (float) p3.getZ());
+		gl.glColor3f((color.getRed() / 255), (color.getGreen() / 255),
+				(color.getBlue() / 255)); // Red
 		gl.glEnd(); // Done Drawing
 	}
 
@@ -57,13 +56,12 @@ public class JOGLTest implements GLEventListener, KeyListener {
 			Color color) {
 		final GL2 gl = gl2.getGL().getGL2();
 		gl.glBegin(GL2.GL_QUADS); // Begin Drawing
-		gl.glColor3f((float) (color.getRed() / 255),
-				(float) (color.getGreen() / 255),
-				(float) (color.getBlue() / 255)); // Red
 		gl.glVertex3f((float) p1.getX(), (float) p1.getY(), (float) p1.getZ());
 		gl.glVertex3f((float) p2.getX(), (float) p2.getY(), (float) p2.getZ());
 		gl.glVertex3f((float) p3.getX(), (float) p3.getY(), (float) p3.getZ());
 		gl.glVertex3f((float) p4.getX(), (float) p4.getY(), (float) p4.getZ());
+		gl.glColor3f((color.getRed() / 255), (color.getGreen() / 255),
+				(color.getBlue() / 255)); // Red
 		gl.glEnd(); // Done Drawing
 	}
 
@@ -75,49 +73,34 @@ public class JOGLTest implements GLEventListener, KeyListener {
 		gl.glTranslatef(0.0f, 0.0f, -5.0f);
 
 		// rotate on the three axis
-		
-		gl.glRotatef(rotateT, 0.0f, 1.0f, 0.0f); // y - pitch
-		gl.glRotatef(rotateT, 0.0f, 0.0f, 1.0f); // z - yaw
 		gl.glRotatef(rotateT, 1.0f, 0.0f, 0.0f); // x - roll
+		gl.glRotatef(rotateT, 0.0f, 1.0f, 0.0f); // y - yaw
+		gl.glRotatef(rotateT, 0.0f, 0.0f, 1.0f); // z - pitch
 
 		// Awesome! [http://www.falloutsoftware.com/tutorials/gl/gl3.htm] -Ryan
 
-		// Square 1
-		Point s1_p1 = new Point(1.0, 1.0, 0.0);
-		Point s1_p2 = new Point(-1.0, 1.0, 0.0);
-		Point s1_p3 = new Point(-1.0, -1.0, 0.0);
-		Point s1_p4 = new Point(1.0, -1.0, 0.0);
-		Color s1_c = WHITE;
-		drawSquare(gl, s1_p1, s1_p2, s1_p3, s1_p4, s1_c);
-		
 		// Triangle 1
-		Point t1_p1 = new Point(1.0, 1.0, 0.0);
-		Point t1_p2 = new Point(-1.0, 1.0, 0.0);
-		Point t1_p3 = new Point(0.0, 0.0, 1.0);
+		Point t1_p1 = new Point(-1.0, -0.5, -3.0);
+		Point t1_p2 = new Point(1.0, -0.5, -3.0);
+		Point t1_p3 = new Point(0.0, 0.5, -3.0);
 		Color t1_c = RED;
 		drawTriangle(gl, t1_p1, t1_p2, t1_p3, t1_c);
 
 		// Triangle 2
-		Point t2_p1 = new Point(-1.0, 1.0, 0.0);
-		Point t2_p2 = new Point(-1.0, -1.0, 0.0);
-		Point t2_p3 = new Point(0.0, 0.0, 1.0);
-		Color t2_c = YELLOW;
+		Point t2_p1 = new Point(-0.5, -1.5, -3.0);
+		Point t2_p2 = new Point(0.5, -1.5, -3.0);
+		Point t2_p3 = new Point(0.0, -1.0, -3.0);
+		Color t2_c = BLUE;
 		drawTriangle(gl, t2_p1, t2_p2, t2_p3, t2_c);
-		
-		// Triangle 3
-		Point t3_p1 = new Point(-1.0, -1.0, 0.0);
-		Point t3_p2 = new Point(1.0, -1.0, 0.0);
-		Point t3_p3 = new Point(0.0, 0.0, 1.0);
-		Color t3_c = GREEN;
-		drawTriangle(gl, t3_p1, t3_p2, t3_p3, t3_c);
-		
-		// Triangle 4
-		Point t4_p1 = new Point(1.0, -1.0, 0.0);
-		Point t4_p2 = new Point(1.0, 1.0, 0.0);
-		Point t4_p3 = new Point(0.0, 0.0, 1.0);
-		Color t4_c = BLUE;
-		drawTriangle(gl, t4_p1, t4_p2, t4_p3, t4_c);
-		
+
+		// Square
+		Point s1_p1 = new Point(-0.5, 0.5, 0.0);
+		Point s1_p2 = new Point(0.5, 0.5, 0.0);
+		Point s1_p3 = new Point(0.5, -0.5, 0.0);
+		Point s1_p4 = new Point(-0.5, -0.5, 0.0);
+		Color s1_c = GREEN;
+		drawSquare(gl, s1_p1, s1_p2, s1_p3, s1_p4, s1_c);
+
 		/**
 		 * // Draw Triangles gl.glBegin(GL2.GL_TRIANGLES); // Begin Larger
 		 * Triangle gl.glVertex3f(-1.0f, -0.5f, -4.0f); // Lower left vertex
