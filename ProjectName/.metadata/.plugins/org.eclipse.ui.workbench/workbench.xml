@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="13" version="2.0">
+<workbench progressCount="15" version="2.0">
 <workbenchAdvisor/>
 <window height="720" maximized="true" width="960" x="320" y="0">
 <fastViewData fastViewLocation="1024">
@@ -17,15 +17,15 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -40,15 +40,16 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.ui.DefaultTextEditor" name="INFO" partName="INFO" path="C:/Users/RMKane/SW-Eng-Team-U1/ProjectName/Common/INFO" title="INFO" tooltip="Common/INFO" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Common/INFO"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JOGLTest.java" partName="JOGLTest.java" path="C:/Users/RMKane/SW-Eng-Team-U1/ProjectName/Common/src/JOGLTest.java" title="JOGLTest.java" tooltip="Common/src/JOGLTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Common/src/JOGLTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1772" selectionTopPixel="34"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>&#x0A;<category IMemento.internal.id="Warnings (27 items)"/>
+<expanded>
+<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -98,7 +99,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -233,9 +234,68 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/Common/INFO"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Common/src/Point.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Common/src/JOGLTest.java"/>
 </editors>
-<item active="true" historyLabel="INFO" index="0">
+<item historyLabel="INFO" index="0">
+<position/>
+</item>
+<item historyLabel="INFO" index="0">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Point.java" index="1">
+<position/>
+</item>
+<item historyLabel="JOGLTest.java" index="2">
+<position info="not_deleted" x="3151" y="0"/>
+</item>
+<item historyLabel="Point.java" index="1">
+<position/>
+</item>
+<item historyLabel="JOGLTest.java" index="2">
+<position info="not_deleted" x="3151" y="0"/>
+</item>
+<item historyLabel="JOGLTest.java" index="2">
+<position info="not_deleted" x="2664" y="0"/>
+</item>
+<item historyLabel="JOGLTest.java" index="2">
+<position info="not_deleted" x="4619" y="0"/>
+</item>
+<item historyLabel="Point.java" index="1">
+<position info="not_deleted" x="168" y="0"/>
+</item>
+<item historyLabel="JOGLTest.java" index="2">
+<position info="not_deleted" x="1962" y="7"/>
+</item>
+<item historyLabel="Point.java" index="1">
+<position info="not_deleted" x="375" y="0"/>
+</item>
+<item historyLabel="JOGLTest.java" index="2">
+<position info="not_deleted" x="1962" y="7"/>
+</item>
+<item historyLabel="JOGLTest.java" index="2">
+<position info="not_deleted" x="2096" y="0"/>
+</item>
+<item historyLabel="JOGLTest.java" index="2">
+<position info="not_deleted" x="2028" y="10"/>
+</item>
+<item historyLabel="JOGLTest.java" index="2">
+<position info="not_deleted" x="4293" y="6"/>
+</item>
+<item historyLabel="JOGLTest.java" index="2">
+<position/>
+</item>
+<item historyLabel="JOGLTest.java" index="2">
+<position/>
+</item>
+<item historyLabel="JOGLTest.java" index="2">
+<position/>
+</item>
+<item historyLabel="JOGLTest.java" index="2">
+<position/>
+</item>
+<item active="true" historyLabel="JOGLTest.java" index="2">
+<position/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -254,11 +314,14 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="INFO" tooltip="Common/INFO">
-<persistable path="/Common/INFO"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Point.java" tooltip="Common/src/Point.java">
 <persistable path="/Common/src/Point.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JOGLTest.java" tooltip="Common/src/JOGLTest.java">
+<persistable path="/Common/src/JOGLTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="INFO" tooltip="Common/INFO">
+<persistable path="/Common/INFO"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Point.java" tooltip="Temp/src/Point.java">
 <persistable path="/Temp/src/Point.java"/>

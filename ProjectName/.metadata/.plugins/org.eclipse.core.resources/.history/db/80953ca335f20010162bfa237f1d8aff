@@ -41,14 +41,6 @@ public class JOGLTest implements GLEventListener, KeyListener {
 
 	}
 
-	// Going to try a sphere. Check out [http://www.land-of-kain.de/docs/jogl/]
-	// for an awesome example.
-	// More Examples:
-	// http://www.felixgers.de/teaching/jogl/
-	// http://www.falloutsoftware.com/tutorials/gl/gl3.htm
-	// http://www.java-tips.org/other-api-tips/jogl/introduction-to-jogl.html
-	
-
 	public void drawTriangle(GL2 gl2, Point p1, Point p2, Point p3, Color color) {
 		final GL2 gl = gl2.getGL().getGL2();
 		gl.glBegin(GL2.GL_TRIANGLES); // Begin Drawing
@@ -102,22 +94,6 @@ public class JOGLTest implements GLEventListener, KeyListener {
 		drawTriangle(gl, q3, q4, top, GREEN);
 		drawTriangle(gl, q4, q1, top, BLUE);
 
-		// Draw a Trapazoidal Cube
-		Point b_q1 = new Point(3.0, 3.0, -1.0);
-		Point b_q2 = new Point(3.0, 2.0, -1.0);
-		Point b_q3 = new Point(2.0, 2.0, -1.0);
-		Point b_q4 = new Point(2.0, 3.0, -1.0);
-		Point t_q1 = new Point(2.75, 2.75, 1.0);
-		Point t_q2 = new Point(2.75, 2.25, 1.0);
-		Point t_q3 = new Point(2.25, 2.25, 1.0);
-		Point t_q4 = new Point(2.25, 2.75, 1.0);
-		drawSquare(gl, b_q1, b_q2, b_q3, b_q4, WHITE);
-		drawSquare(gl, t_q1, t_q2, b_q2, b_q1, RED);
-		drawSquare(gl, t_q2, t_q3, b_q3, b_q2, YELLOW);
-		drawSquare(gl, t_q3, t_q4, b_q4, b_q3, GREEN);
-		drawSquare(gl, t_q4, t_q1, b_q1, b_q4, CYAN);
-		drawSquare(gl, t_q1, t_q2, t_q3, t_q4, FUCHSIA);
-
 		/**
 		 * // Draw Triangles gl.glBegin(GL2.GL_TRIANGLES); // Begin Larger
 		 * Triangle gl.glVertex3f(-1.0f, -0.5f, -4.0f); // Lower left vertex
@@ -170,7 +146,7 @@ public class JOGLTest implements GLEventListener, KeyListener {
 		float h = (float) width / (float) height;
 		gl.glMatrixMode(GLMatrixFunc.GL_PROJECTION);
 		gl.glLoadIdentity();
-		glu.gluPerspective(100.0f, h, 1.0, 1000.0);
+		glu.gluPerspective(50.0f, h, 1.0, 1000.0);
 		gl.glMatrixMode(GLMatrixFunc.GL_MODELVIEW);
 		gl.glLoadIdentity();
 	}

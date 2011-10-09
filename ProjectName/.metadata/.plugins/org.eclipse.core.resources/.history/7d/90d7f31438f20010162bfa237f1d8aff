@@ -43,12 +43,7 @@ public class JOGLTest implements GLEventListener, KeyListener {
 
 	// Going to try a sphere. Check out [http://www.land-of-kain.de/docs/jogl/]
 	// for an awesome example.
-	// More Examples:
-	// http://www.felixgers.de/teaching/jogl/
-	// http://www.falloutsoftware.com/tutorials/gl/gl3.htm
-	// http://www.java-tips.org/other-api-tips/jogl/introduction-to-jogl.html
 	
-
 	public void drawTriangle(GL2 gl2, Point p1, Point p2, Point p3, Color color) {
 		final GL2 gl = gl2.getGL().getGL2();
 		gl.glBegin(GL2.GL_TRIANGLES); // Begin Drawing
@@ -101,7 +96,7 @@ public class JOGLTest implements GLEventListener, KeyListener {
 		drawTriangle(gl, q2, q3, top, YELLOW);
 		drawTriangle(gl, q3, q4, top, GREEN);
 		drawTriangle(gl, q4, q1, top, BLUE);
-
+		
 		// Draw a Trapazoidal Cube
 		Point b_q1 = new Point(3.0, 3.0, -1.0);
 		Point b_q2 = new Point(3.0, 2.0, -1.0);
