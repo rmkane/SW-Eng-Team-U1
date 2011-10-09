@@ -1,4 +1,6 @@
-It WORKS!
-
 JOGLQuad was downloaded here: 
 http://www.leolol.com/drupal/game-programming
+
+Make sure you use Eclipse when altering the code. The workspace should be set to:
+
+<Path>/SW-Eng-Team-U1/ProjectName
