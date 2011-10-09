@@ -2,29 +2,11 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="lib" path="jar/gluegen-gl.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:platform:/resource/Common/javadoc.zip!/"/>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Common/lib64"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="jar/gluegen-rt.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:platform:/resource/Common/javadoc.zip!/"/>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Common/lib64"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="jar/jogl.all.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:platform:/resource/Common/javadoc.zip!/"/>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Common/lib64"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="lib" path="jar/nativewindow.all.jar">
-		<attributes>
-			<attribute name="javadoc_location" value="jar:platform:/resource/Common/javadoc.zip!/"/>
-			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Common/lib64"/>
-		</attributes>
-	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/jogl"/>
+	<classpathentry kind="lib" path="jar/gluegen-gl.jar"/>
+	<classpathentry kind="lib" path="jar/gluegen-rt.jar" sourcepath="jar"/>
+	<classpathentry kind="lib" path="jar/jogl.all.jar" sourcepath="/home/smw/Downloads/jogl-2.0-b41-20110916-linux-amd64/jogl-java-src.zip"/>
+	<classpathentry kind="lib" path="jar/nativewindow.all.jar"/>
+	<classpathentry kind="lib" path="/home/smw/Downloads/jogl-2.0-b41-20110916-linux-amd64/jar/jogl.all.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
