@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="28" version="2.0">
+<workbench progressCount="22" version="2.0">
 <workbenchAdvisor/>
 <window height="720" maximized="true" width="960" x="320" y="0">
 <fastViewData fastViewLocation="1024">
@@ -10,18 +10,18 @@
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
-<coolbarLayout>
+<coolbarLayout locked="0">
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="160" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="132" y="30"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
-<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="122" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="130" y="22"/>
+<coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="30"/>
+<coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="124" y="30"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="184" y="30"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
@@ -36,23 +36,13 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
-<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JOGLTest.java" partName="JOGLTest.java" path="C:/Users/RMKane/SW-Eng-Team-U1/ProjectName/Common/src/JOGLTest.java" title="JOGLTest.java" tooltip="Common/src/JOGLTest.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JOGLTest.java" partName="JOGLTest.java" path="/home/ryankane/SW-Eng-Team-U1/ProjectName/Common/src/JOGLTest.java" title="JOGLTest.java" tooltip="Common/src/JOGLTest.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Common/src/JOGLTest.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1372" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Point.java" partName="Point.java" path="/home/ryankane/SW-Eng-Team-U1/ProjectName/Common/src/Point.java" title="Point.java" tooltip="Common/src/Point.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Common/src/Point.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GUI.java" partName="GUI.java" path="/home/ryankane/SW-Eng-Team-U1/ProjectName/Common/src/GUI.java" title="GUI.java" tooltip="Common/src/GUI.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Common/src/GUI.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="432" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -76,6 +66,7 @@
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.LibraryFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.StaticsFilter" isEnabled="false"/>
+<child filterId="org.eclipse.pde.ui.ExternalPluginLibrariesFilter1" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter" isEnabled="false"/>
@@ -91,9 +82,8 @@
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*" isEnabled="true"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter" isEnabled="true"/>
+<child filterId="org.eclipse.pde.ui.BinaryProjectFilter1" isEnabled="false"/>
 <child filterId="org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter" isEnabled="true"/>
-<child filterId="org.eclipse.mylyn.java.ui.MembersFilter" isEnabled="false"/>
-<child filterId="org.eclipse.m2e.MavenModuleFilter" isEnabled="false"/>
 </xmlDefinedFilters>
 </customFilters>
 </viewState>
@@ -106,7 +96,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -124,11 +114,6 @@
 <alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.debug.ui.JDTDebugActionSet"/>
 <alwaysOnActionSet id="org.eclipse.jdt.junit.JUnitActionSet"/>
-<alwaysOnActionSet id="org.eclipse.egit.ui.navigation"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.doc.actionSet"/>
-<alwaysOnActionSet id="org.eclipse.mylyn.tasks.ui.navigation"/>
-<alwaysOnActionSet id="org.eclipse.wb.core.ui.actionset"/>
 <show_view_action id="org.eclipse.jdt.ui.PackageExplorer"/>
 <show_view_action id="org.eclipse.jdt.ui.TypeHierarchy"/>
 <show_view_action id="org.eclipse.jdt.ui.SourceView"/>
@@ -245,7 +230,6 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/Common/INFO"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Common/src/Point.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Common/src/JOGLTest.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Common/src/Point.java"/>
@@ -256,155 +240,155 @@
 <editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=Common/libSo\/gluegen-rt.jar&lt;jogamp.common.os(MachineDescriptionRuntime.class"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Common/src/JOGLTest.java"/>
 </editors>
-<item historyLabel="INFO" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Point.java" index="1">
+<item historyLabel="Point.java" index="0">
 <position/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position info="not_deleted" x="3151" y="0"/>
 </item>
-<item historyLabel="Point.java" index="1">
+<item historyLabel="Point.java" index="0">
 <position/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position info="not_deleted" x="3151" y="0"/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position info="not_deleted" x="2664" y="0"/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position info="not_deleted" x="4619" y="0"/>
 </item>
-<item historyLabel="Point.java" index="1">
+<item historyLabel="Point.java" index="0">
 <position info="not_deleted" x="168" y="0"/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position info="not_deleted" x="1962" y="7"/>
 </item>
-<item historyLabel="Point.java" index="1">
+<item historyLabel="Point.java" index="0">
 <position info="not_deleted" x="375" y="0"/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position info="not_deleted" x="1962" y="7"/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position info="not_deleted" x="2096" y="0"/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position info="not_deleted" x="2028" y="10"/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position info="not_deleted" x="4293" y="6"/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position info="not_deleted" x="610" y="0"/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position info="not_deleted" x="947" y="5"/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position info="not_deleted" x="1285" y="0"/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position info="not_deleted" x="4396" y="0"/>
 </item>
-<item historyLabel="Point.java" index="3">
+<item historyLabel="Point.java" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="GUI.java" index="4">
+<item historyLabel="GUI.java" index="3">
 <position info="not_deleted" x="1523" y="0"/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position info="not_deleted" x="4396" y="0"/>
 </item>
-<item historyLabel="GUI.java" index="4">
+<item historyLabel="GUI.java" index="3">
 <position info="not_deleted" x="1523" y="0"/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position/>
 </item>
-<item historyLabel="GUI.java" index="4">
+<item historyLabel="GUI.java" index="3">
 <position info="not_deleted" x="1523" y="0"/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position/>
 </item>
-<item historyLabel="GUI.java" index="4">
+<item historyLabel="GUI.java" index="3">
 <position info="not_deleted" x="1510" y="24"/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position info="not_deleted" x="7695" y="0"/>
 </item>
-<item historyLabel="Point.java" index="3">
+<item historyLabel="Point.java" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="GUI.java" index="4">
+<item historyLabel="GUI.java" index="3">
 <position info="not_deleted" x="1510" y="24"/>
 </item>
-<item historyLabel="JOGLTest.java" index="2">
+<item historyLabel="JOGLTest.java" index="1">
 <position info="not_deleted" x="907" y="0"/>
 </item>
-<item historyLabel="GUI.java" index="4">
+<item historyLabel="GUI.java" index="3">
 <position info="not_deleted" x="1510" y="24"/>
 </item>
-<item historyLabel="Point.java" index="3">
+<item historyLabel="Point.java" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Point.java" index="3">
+<item historyLabel="Point.java" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="JOGLTest.java" index="5">
+<item historyLabel="JOGLTest.java" index="4">
 <position info="not_deleted" x="907" y="0"/>
 </item>
-<item historyLabel="Point.java" index="6">
+<item historyLabel="Point.java" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Point.java" index="6">
+<item historyLabel="Point.java" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="GUI.java" index="7">
+<item historyLabel="GUI.java" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="JOGLTest.java" index="5">
+<item historyLabel="JOGLTest.java" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="GUI.java" index="7">
+<item historyLabel="GUI.java" index="6">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="JOGLTest.java" index="5">
+<item historyLabel="JOGLTest.java" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="JOGLTest.java" index="5">
+<item historyLabel="JOGLTest.java" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="MachineDescriptionRuntime.class" index="8">
+<item historyLabel="MachineDescriptionRuntime.class" index="7">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="JOGLTest.java" index="9">
+<item historyLabel="JOGLTest.java" index="8">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item active="true" historyLabel="JOGLTest.java" index="9">
+<item historyLabel="JOGLTest.java" index="8">
 <position info="not_deleted" x="6093" y="14"/>
+</item>
+<item active="true" historyLabel="JOGLTest.java" index="8">
+<position info="not_deleted" x="0" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -413,7 +397,6 @@
 <actionBarAdvisor/>
 <trimLayout>
 <trimArea IMemento.internal.id="128">
-<trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
 <trimArea IMemento.internal.id="1024">
