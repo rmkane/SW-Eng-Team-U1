@@ -91,13 +91,13 @@ public class JOGLTest implements GLEventListener, KeyListener {
 		// Awesome! [http://www.falloutsoftware.com/tutorials/gl/gl3.htm] -Ryan
 
 		// Draw a Square Pyramid
-		Point top = new Point(0.0, 0.0, 1.5);
+		Point top = new Point(0.0, 0.0, 3.0);
 		Point q1 = new Point(1.0, 1.0, 0.0);
 		Point q2 = new Point(-1.0, 1.0, 0.0);
 		Point q3 = new Point(-1.0, -1.0, 0.0);
 		Point q4 = new Point(1.0, -1.0, 0.0);
-		drawSquare(gl, q1, q2, q3, q4, WHITE);
-		drawTriangle(gl, q1, q2, top, RED);
+		drawSquare(gl, q1, q2, q3, q4, CYAN);
+		drawTriangle(gl, q1, q2, top, CYAN);
 		drawTriangle(gl, q2, q3, top, YELLOW);
 		drawTriangle(gl, q3, q4, top, GREEN);
 		drawTriangle(gl, q4, q1, top, BLUE);
@@ -216,6 +216,7 @@ public class JOGLTest implements GLEventListener, KeyListener {
 		frame.setVisible(true);
 		animator.start();
 		canvas.requestFocus();
+
 	}
 
 	public void dispose(GLAutoDrawable gLDrawable) {
