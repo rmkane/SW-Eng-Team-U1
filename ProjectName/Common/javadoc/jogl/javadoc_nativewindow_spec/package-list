@@ -1,0 +1,7 @@
+javax.media.nativewindow
+javax.media.nativewindow.awt
+javax.media.nativewindow.egl
+javax.media.nativewindow.macosx
+javax.media.nativewindow.util
+javax.media.nativewindow.windows
+javax.media.nativewindow.x11
