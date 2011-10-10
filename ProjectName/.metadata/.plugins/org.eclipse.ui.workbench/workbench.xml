@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="17" version="2.0">
+<workbench progressCount="22" version="2.0">
 <workbenchAdvisor/>
 <window height="720" maximized="true" width="960" x="320" y="0">
 <fastViewData fastViewLocation="1024">
@@ -12,7 +12,7 @@
 </perspectiveBar>
 <coolbarLayout locked="0">
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="104" y="30"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="132" y="30"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="120" y="30"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="30"/>
@@ -42,11 +42,11 @@
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JOGLTest.java" partName="JOGLTest.java" path="/home/smw/SW-Eng-Team-U1/ProjectName/Common/src/JOGLTest.java" title="JOGLTest.java" tooltip="Common/src/JOGLTest.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JOGLTest.java" partName="JOGLTest.java" path="/home/ryankane/SW-Eng-Team-U1/ProjectName/Common/src/JOGLTest.java" title="JOGLTest.java" tooltip="Common/src/JOGLTest.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Common/src/JOGLTest.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="907" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1272" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Point.java" partName="Point.java" path="/home/smw/SW-Eng-Team-U1/ProjectName/Common/src/Point.java" title="Point.java" tooltip="Common/src/Point.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Point.java" partName="Point.java" path="/home/ryankane/SW-Eng-Team-U1/ProjectName/Common/src/Point.java" title="Point.java" tooltip="Common/src/Point.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Common/src/Point.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
@@ -191,7 +191,7 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.119958095" ratioLeft="229" ratioRight="1680" relationship="2" relative="left"/>
+<info part="org.eclipse.ui.editorss" ratio="0.15767418" ratioLeft="301" ratioRight="1608" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.76861703" ratioLeft="578" ratioRight="174" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
@@ -247,6 +247,7 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Common/src/JOGLTest.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Common/src/Point.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Common/src/GUI.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/Common/src/JOGLTest.java"/>
 </editors>
 <item historyLabel="INFO" index="0">
 <position/>
@@ -362,8 +363,14 @@
 <item historyLabel="GUI.java" index="4">
 <position info="not_deleted" x="1510" y="24"/>
 </item>
-<item active="true" historyLabel="Point.java" index="3">
+<item historyLabel="Point.java" index="3">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Point.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="JOGLTest.java" index="5">
+<position info="not_deleted" x="907" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>

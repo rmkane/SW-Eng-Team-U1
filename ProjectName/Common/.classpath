@@ -7,6 +7,10 @@
 	<classpathentry kind="lib" path="jar/gluegen-rt.jar" sourcepath="jar"/>
 	<classpathentry kind="lib" path="jar/jogl.all.jar" sourcepath="/home/smw/Downloads/jogl-2.0-b41-20110916-linux-amd64/jogl-java-src.zip"/>
 	<classpathentry kind="lib" path="jar/nativewindow.all.jar"/>
-	<classpathentry kind="lib" path="/home/smw/Downloads/jogl-2.0-b41-20110916-linux-amd64/jar/jogl.all.jar"/>
+	<classpathentry kind="lib" path="jar/jogl-all-natives-linux-amd64.jar">
+		<attributes>
+			<attribute name="org.eclipse.jdt.launching.CLASSPATH_ATTR_LIBRARY_PATH_ENTRY" value="Common/libSo"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
