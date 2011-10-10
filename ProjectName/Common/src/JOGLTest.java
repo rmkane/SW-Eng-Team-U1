@@ -96,7 +96,7 @@ public class JOGLTest implements GLEventListener, KeyListener {
 		Point q2 = new Point(-1.0, 1.0, 0.0);
 		Point q3 = new Point(-1.0, -1.0, 0.0);
 		Point q4 = new Point(1.0, -1.0, 0.0);
-		drawSquare(gl, q1, q2, q3, q4, CYAN);
+		drawSquare(gl, q1, q2, q3, q4, WHITE);
 		drawTriangle(gl, q1, q2, top, CYAN);
 		drawTriangle(gl, q2, q3, top, YELLOW);
 		drawTriangle(gl, q3, q4, top, GREEN);
@@ -143,7 +143,7 @@ public class JOGLTest implements GLEventListener, KeyListener {
 		 * gl.glEnd(); // Done Drawing The Quad
 		 */
 		// increasing rotation for the next iteration
-		rotateT += 0.2f;
+		rotateT += 5.2f;
 	}
 
 	public void displayChanged(GLAutoDrawable gLDrawable, boolean modeChanged,
