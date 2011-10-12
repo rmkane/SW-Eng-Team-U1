@@ -1600,3 +1600,81 @@ java.lang.RuntimeException: WARNING: Blocked recursive attempt to close part org
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:620)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:575)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1408)
+!SESSION 2011-10-10 01:30:22.120 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.ltk.core.refactoring 2 4 2011-10-10 01:36:09.775
+!MESSAGE Build path contains duplicate entry: 'jar/gluegen-rt.jar' for project 'Common'
+!SESSION 2011-10-10 01:52:35.372 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jdt.core 4 0 2011-10-10 01:52:47.705
+!MESSAGE Invalid ZIP archive: libSo/jogl.all.jar [in Common]
+
+!ENTRY org.eclipse.jdt.core 4 0 2011-10-10 01:52:47.729
+!MESSAGE Invalid ZIP archive: jar/newt.event.jar [in Common]
+
+!ENTRY org.eclipse.jdt.core 4 0 2011-10-10 01:52:47.731
+!MESSAGE Invalid ZIP archive: jar/jogl.all.jar [in Common]
+
+!ENTRY org.eclipse.jdt.core 4 0 2011-10-10 01:52:47.733
+!MESSAGE Invalid ZIP archive: jar/jogl-all-natives-linux-amd64.jar [in Common]
+!SESSION 2011-10-11 21:37:11.737 -----------------------------------------------
+eclipse.buildId=M20100211-1343
+java.version=1.6.0_22
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.ui.workbench 4 2 2011-10-11 21:37:17.020
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 1
+org.eclipse.ui.WorkbenchException: The content of elements must consist of well-formed character data or markup.
+	at org.eclipse.ui.XMLMemento.createReadRoot(XMLMemento.java:121)
+	at org.eclipse.ui.XMLMemento.createReadRoot(XMLMemento.java:64)
+	at org.eclipse.ui.internal.Workbench$49.run(Workbench.java:1895)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench.restoreState(Workbench.java:1890)
+	at org.eclipse.ui.internal.WorkbenchConfigurer.restoreState(WorkbenchConfigurer.java:183)
+	at org.eclipse.ui.application.WorkbenchAdvisor$1.run(WorkbenchAdvisor.java:781)
+Caused by: org.xml.sax.SAXParseException; lineNumber: 45; columnNumber: 2; The content of elements must consist of well-formed character data or markup.
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:253)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:288)
+	at org.eclipse.ui.XMLMemento.createReadRoot(XMLMemento.java:94)
+	... 6 more
+!SUBENTRY 1 org.eclipse.ui 4 0 2011-10-11 21:37:17.021
+!MESSAGE The content of elements must consist of well-formed character data or markup.
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 45; columnNumber: 2; The content of elements must consist of well-formed character data or markup.
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:253)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:288)
+	at org.eclipse.ui.XMLMemento.createReadRoot(XMLMemento.java:94)
+	at org.eclipse.ui.XMLMemento.createReadRoot(XMLMemento.java:64)
+	at org.eclipse.ui.internal.Workbench$49.run(Workbench.java:1895)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench.restoreState(Workbench.java:1890)
+	at org.eclipse.ui.internal.WorkbenchConfigurer.restoreState(WorkbenchConfigurer.java:183)
+	at org.eclipse.ui.application.WorkbenchAdvisor$1.run(WorkbenchAdvisor.java:781)
+!SUBENTRY 1 org.eclipse.ui 4 0 2011-10-11 21:37:17.021
+!MESSAGE The content of elements must consist of well-formed character data or markup.
+!STACK 0
+org.xml.sax.SAXParseException; lineNumber: 45; columnNumber: 2; The content of elements must consist of well-formed character data or markup.
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:253)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:288)
+	at org.eclipse.ui.XMLMemento.createReadRoot(XMLMemento.java:94)
+	at org.eclipse.ui.XMLMemento.createReadRoot(XMLMemento.java:64)
+	at org.eclipse.ui.internal.Workbench$49.run(Workbench.java:1895)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench.restoreState(Workbench.java:1890)
+	at org.eclipse.ui.internal.WorkbenchConfigurer.restoreState(WorkbenchConfigurer.java:183)
+	at org.eclipse.ui.application.WorkbenchAdvisor$1.run(WorkbenchAdvisor.java:781)

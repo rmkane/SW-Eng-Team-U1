@@ -6,3 +6,12 @@ Sean Weber
 Donald Shaner
 Dorothy Kirlew
 
+NOTES:
+Make sure you use Eclipse when altering the code. 
+The workspace should be set to:
+<Path>/SW-Eng-Team-U1/ProjectName
+
+In order to run the program in Elipse, 
+you must ensure that the path to the JARS
+and their Libraries coorespond to you os
+and its bit architecture.
