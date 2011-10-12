@@ -74,6 +74,7 @@ public class JOGLTest implements GLEventListener, KeyListener {
 		gl.glVertex3f((float) p4.getX(), (float) p4.getY(), (float) p4.getZ());
 		gl.glEnd(); // Done Drawing
 	}
+	
 
 	public void display(GLAutoDrawable gLDrawable) {
 		final GL2 gl = gLDrawable.getGL().getGL2();
@@ -97,7 +98,7 @@ public class JOGLTest implements GLEventListener, KeyListener {
 		Point q3 = new Point(-1.0, -1.0, 0.0);
 		Point q4 = new Point(1.0, -1.0, 0.0);
 		drawSquare(gl, q1, q2, q3, q4, CYAN);
-		drawTriangle(gl, q1, q2, top, CYAN);
+		drawTriangle(gl, q1, q2, top, RED);
 		drawTriangle(gl, q2, q3, top, YELLOW);
 		drawTriangle(gl, q3, q4, top, GREEN);
 		drawTriangle(gl, q4, q1, top, BLUE);
@@ -118,6 +119,27 @@ public class JOGLTest implements GLEventListener, KeyListener {
 		drawSquare(gl, t_q4, t_q1, b_q1, b_q4, CYAN);
 		drawSquare(gl, t_q1, t_q2, t_q3, t_q4, FUCHSIA);
 
+		// Draw a Hexagonal Prism
+		Point h_1 = new Point(5.0, 5.0, 0.0);
+		Point h_2 = new Point(4.0, 5.0, 0.0);
+		Point h_3 = new Point(3.5, 4.5, 0.0);
+		Point h_4 = new Point(4.0, 4.0, 0.0);
+		Point h_5 = new Point(5.0, 4.0, 0.0);
+		Point h_6 = new Point(5.5, 4.5, 0.0);
+		Point hb_1 = new Point(5.0, 5.0, 1.0);
+		Point hb_2 = new Point(4.0, 5.0, 1.0);
+		Point hb_3 = new Point(3.5, 4.5, 1.0);
+		Point hb_4 = new Point(4.0, 4.0, 1.0);
+		Point hb_5 = new Point(5.0, 4.0, 1.0);
+		Point hb_6 = new Point(5.5, 4.5, 1.0);
+		drawSquare(gl, h_1, h_2, hb_1, hb_2, RED);
+		drawSquare(gl, h_2, h_3, hb_2, hb_3, RED);
+		drawSquare(gl, h_3, h_4, hb_3, hb_4, RED);
+		drawSquare(gl, h_4, h_5, hb_4, hb_5, RED);
+		drawSquare(gl, h_5, h_6, hb_5, hb_6, RED);
+		drawSquare(gl, h_6, h_1, hb_6, hb_1, RED);
+
+		
 		/**
 		 * // Draw Triangles gl.glBegin(GL2.GL_TRIANGLES); // Begin Larger
 		 * Triangle gl.glVertex3f(-1.0f, -0.5f, -4.0f); // Lower left vertex
