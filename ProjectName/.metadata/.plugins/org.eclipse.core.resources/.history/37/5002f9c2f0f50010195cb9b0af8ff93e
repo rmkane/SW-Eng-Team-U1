@@ -82,24 +82,6 @@ public class JOGLTest implements GLEventListener, KeyListener {
 		gl.glEnd(); // Done Drawing
 	}
 	
-	public void drawHexagon(GL2 gl2, Point p1, Point p2, Point p3, Point p4, 
-			Point p5, Point p6, Point p7, Point p8, Color color){
-		final GL2 gl = gl2.getGL().getGL2();
-		gl.glBegin(GL2.GL_TRIANGLE_FAN); // Begin Drawing
-		gl.glColor3f((float) (color.getRed() / 255f),
-				(float) (color.getGreen() / 255f),
-				(float) (color.getBlue() / 255f));
-		gl.glVertex3f((float) p1.getX(), (float) p1.getY(), (float) p1.getZ());
-		gl.glVertex3f((float) p2.getX(), (float) p2.getY(), (float) p2.getZ());
-		gl.glVertex3f((float) p3.getX(), (float) p3.getY(), (float) p3.getZ());
-		gl.glVertex3f((float) p4.getX(), (float) p4.getY(), (float) p4.getZ());
-		gl.glVertex3f((float) p5.getX(), (float) p5.getY(), (float) p5.getZ());
-		gl.glVertex3f((float) p6.getX(), (float) p6.getY(), (float) p6.getZ());
-		gl.glVertex3f((float) p7.getX(), (float) p7.getY(), (float) p7.getZ());
-		gl.glVertex3f((float) p8.getX(), (float) p8.getY(), (float) p8.getZ());
-		gl.glEnd(); 		
-	}
-	
 
 	public void display(GLAutoDrawable gLDrawable) {
 		final GL2 gl = gLDrawable.getGL().getGL2();
@@ -145,14 +127,12 @@ public class JOGLTest implements GLEventListener, KeyListener {
 		drawSquare(gl, t_q1, t_q2, t_q3, t_q4, FUCHSIA);
 
 		// Draw a Hexagonal Prism
-		Point h_0 = new Point(-2.5, -2.5, 0.0);
 		Point h_1 = new Point(-3.0, -3.0, 0.0);
 		Point h_2 = new Point(-2.0, -3.0, 0.0);
 		Point h_3 = new Point(-1.5, -2.5, 0.0);
 		Point h_4 = new Point(-2.0, -2.0, 0.0);
 		Point h_5 = new Point(-3.0, -2.0, 0.0);
 		Point h_6 = new Point(-3.5, -2.5, 0.0);
-		Point hb_0 = new Point(-2.5, -2.5, 1.0);
 		Point hb_1 = new Point(-3.0, -3.0, 1.0);
 		Point hb_2 = new Point(-2.0, -3.0, 1.0);
 		Point hb_3 = new Point(-1.5, -2.5, 1.0);
@@ -165,8 +145,19 @@ public class JOGLTest implements GLEventListener, KeyListener {
 		drawSquare(gl, h_4, h_5, hb_5, hb_4, LIME);
 		drawSquare(gl, h_5, h_6, hb_6, hb_5, BLUE);
 		drawSquare(gl, h_6, h_1, hb_1, hb_6, FUCHSIA);
-		drawHexagon(gl, h_0, h_1, h_2, h_3, h_4, h_5, h_6, h_1, WHITE);
-		drawHexagon(gl, hb_0, hb_1, hb_2, hb_3, hb_4, hb_5, hb_6, hb_1, GREEN);
+		gl.glPushMatrix();
+        //gl.glTranslatef(2.0f,-1.5f,-8.0f);        // Move right 2.0 units, up 1.5 units, and back 8 units
+ 
+        gl.glBegin(GL.GL_TRIANGLE_FAN);           // Begin drawing triangle fan
+        gl.glVertex3f( 0.0f, 0.0f, -4.0f);        // V1
+        gl.glVertex3f( 0.0f, 1.5f, -4.0f);        // V2
+        gl.glVertex3f( 1.5f,  0.0f, -4.0f);       // V3
+ 
+        gl.glVertex3f( 1.5f, -1.5f, -4.0f);       // V6
+        gl.glVertex3f( 0.0f,  -1.5f, -4.0f);      // V4
+        gl.glVertex3f(-1.5f, 0f, -4.0f);          // V5
+        gl.glEnd();                               // Finish drawing triangle fan
+        gl.glPopMatrix();
 		
 		/**
 		 * // Draw Triangles gl.glBegin(GL2.GL_TRIANGLES); // Begin Larger

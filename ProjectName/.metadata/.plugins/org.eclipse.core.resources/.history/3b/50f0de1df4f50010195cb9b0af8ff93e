@@ -85,7 +85,7 @@ public class JOGLTest implements GLEventListener, KeyListener {
 	public void drawHexagon(GL2 gl2, Point p1, Point p2, Point p3, Point p4, 
 			Point p5, Point p6, Point p7, Point p8, Color color){
 		final GL2 gl = gl2.getGL().getGL2();
-		gl.glBegin(GL2.GL_TRIANGLE_FAN); // Begin Drawing
+		gl.glBegin(GL2.GL_QUADS); // Begin Drawing
 		gl.glColor3f((float) (color.getRed() / 255f),
 				(float) (color.getGreen() / 255f),
 				(float) (color.getBlue() / 255f));
@@ -152,7 +152,6 @@ public class JOGLTest implements GLEventListener, KeyListener {
 		Point h_4 = new Point(-2.0, -2.0, 0.0);
 		Point h_5 = new Point(-3.0, -2.0, 0.0);
 		Point h_6 = new Point(-3.5, -2.5, 0.0);
-		Point hb_0 = new Point(-2.5, -2.5, 1.0);
 		Point hb_1 = new Point(-3.0, -3.0, 1.0);
 		Point hb_2 = new Point(-2.0, -3.0, 1.0);
 		Point hb_3 = new Point(-1.5, -2.5, 1.0);
@@ -166,7 +165,6 @@ public class JOGLTest implements GLEventListener, KeyListener {
 		drawSquare(gl, h_5, h_6, hb_6, hb_5, BLUE);
 		drawSquare(gl, h_6, h_1, hb_1, hb_6, FUCHSIA);
 		drawHexagon(gl, h_0, h_1, h_2, h_3, h_4, h_5, h_6, h_1, WHITE);
-		drawHexagon(gl, hb_0, hb_1, hb_2, hb_3, hb_4, hb_5, hb_6, hb_1, GREEN);
 		
 		/**
 		 * // Draw Triangles gl.glBegin(GL2.GL_TRIANGLES); // Begin Larger
