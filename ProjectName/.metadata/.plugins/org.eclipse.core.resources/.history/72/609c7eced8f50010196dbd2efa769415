@@ -139,12 +139,12 @@ public class JOGLTest implements GLEventListener, KeyListener {
 		Point hb_4 = new Point(-2.0, -2.0, 1.0);
 		Point hb_5 = new Point(-3.0, -2.0, 1.0);
 		Point hb_6 = new Point(-3.5, -2.5, 1.0);
-		drawSquare(gl, h_1, h_2, hb_2, hb_1, RED);
-		drawSquare(gl, h_2, h_3, hb_3, hb_2, ORANGE);
-		drawSquare(gl, h_3, h_4, hb_4, hb_3, YELLOW);
-		drawSquare(gl, h_4, h_5, hb_5, hb_4, LIME);
-		drawSquare(gl, h_5, h_6, hb_6, hb_5, BLUE);
-		drawSquare(gl, h_6, h_1, hb_1, hb_6, FUCHSIA);
+		drawSquare(gl, h_1, h_2, hb_1, hb_2, RED);
+		drawSquare(gl, h_2, h_3, hb_2, hb_3, ORANGE);
+		drawSquare(gl, h_3, h_4, hb_3, hb_4, YELLOW);
+		drawSquare(gl, h_4, h_5, hb_4, hb_5, LIME);
+		drawSquare(gl, h_5, h_6, hb_5, hb_6, BLUE);
+		drawSquare(gl, h_6, h_1, hb_6, hb_1, FUCHSIA);
 
 		
 		/**
