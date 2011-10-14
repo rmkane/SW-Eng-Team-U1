@@ -1,6 +1,6 @@
-#Thu Oct 13 18:39:35 EDT 2011
+#Thu Oct 13 20:03:42 EDT 2011
 >>>>>>>=887d48dabf9f9c2b3c26fa61830bd4da7a69bb27
 eclipse.preferences.version=1
-org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<vmSettings defaultVM\="57,org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType13,1318545273398" defaultVMConnector\="">\n<vmType id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType">\n<vm id\="1318533997947" name\="jre6" path\="/home/smw/C\:\\Program Files\\Java\\jre6"/>\n<vm id\="1318545273398" javadocURL\="http\://java.sun.com/javase/6/docs/api/" name\="java-6-openjdk" path\="/usr/lib/jvm/java-6-openjdk"/>\n</vmType>\n</vmSettings>\n
+org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<vmSettings defaultVM\="57,org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType13,1318550079774" defaultVMConnector\="">\r\n<vmType id\="org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType">\r\n<vm id\="1318550079774" name\="jre6" path\="C\:\\Program Files\\Java\\jre6"/>\r\n</vmType>\r\n</vmSettings>\r\n
 <<<<<<<=HEAD
 =\=\=\=\=\=\=

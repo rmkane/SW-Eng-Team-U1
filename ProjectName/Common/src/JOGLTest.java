@@ -110,8 +110,8 @@ public class JOGLTest implements GLEventListener, KeyListener {
 
 		// rotate on the three axis
 
-		gl.glRotatef(rotateT, 0.0f, 1.0f, 0.0f); // y - pitch
-		gl.glRotatef(rotateT, 0.0f, 0.0f, 1.0f); // z - yaw
+		//gl.glRotatef(rotateT, 0.0f, 1.0f, 0.0f); // y - pitch
+		//gl.glRotatef(rotateT, 0.0f, 0.0f, 1.0f); // z - yaw
 		gl.glRotatef(rotateT, 1.0f, 0.0f, 0.0f); // x - roll
 
 		// Awesome! [http://www.falloutsoftware.com/tutorials/gl/gl3.htm] -Ryan
@@ -238,11 +238,11 @@ public class JOGLTest implements GLEventListener, KeyListener {
 	public void keyTyped(KeyEvent e) {
 		// Increase Rotation speed
 		if (e.getKeyCode() == KeyEvent.VK_UP) {
-			rotateT += 1f;
+			rotateT += 200f;
 		}
 		// Decrease Rotation speed
 		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-			rotateT -= 1f;
+			rotateT -= 200f;
 		}
 	}
 

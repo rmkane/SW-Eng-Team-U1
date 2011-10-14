@@ -1791,3 +1791,25 @@ org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
 	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:146)
 	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:241)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+!SESSION 2011-10-13 19:54:18.314 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2011-10-13 19:54:33.695
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2011-10-14 13:28:20.508 -----------------------------------------------
+eclipse.buildId=M20110909-1335
+java.version=1.6.0_21
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.help.base 4 4 2011-10-14 13:34:16.982
+!MESSAGE Help documentation could not be indexed completely.
+!SUBENTRY 1 org.eclipse.help.base 4 4 2011-10-14 13:34:16.982
+!MESSAGE Help document /org.eclipse.mylyn.help.ui/doc/notices.html cannot be opened.
