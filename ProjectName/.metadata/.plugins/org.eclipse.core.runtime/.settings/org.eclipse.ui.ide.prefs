@@ -1,10 +1,6 @@
-#Thu Oct 13 15:30:25 EDT 2011
->>>>>>>=887d48dabf9f9c2b3c26fa61830bd4da7a69bb27
-PROBLEMS_FILTERS_MIGRATE=true
-<<<<<<<=HEAD
-quickStart=false
-tipsAndTricks=true
+#Fri Oct 14 19:58:51 PDT 2011
 eclipse.preferences.version=1
-platformState=1318224258433
-EXIT_PROMPT_ON_CLOSE_LAST_WINDOW=false
-=\=\=\=\=\=\=
+TASKS_FILTERS_MIGRATE=true
+tipsAndTricks=true
+platformState=1318216385485
+quickStart=false

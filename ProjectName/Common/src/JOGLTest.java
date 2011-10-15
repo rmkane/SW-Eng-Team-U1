@@ -15,6 +15,8 @@ import javax.media.opengl.awt.GLCanvas;
 import javax.media.opengl.fixedfunc.GLLightingFunc;
 import javax.media.opengl.fixedfunc.GLMatrixFunc;
 import javax.media.opengl.glu.GLU;
+import javax.media.opengl.glu.GLUquadric;
+
 import com.jogamp.opengl.util.Animator;
 
 // Imported from local libraries
@@ -127,7 +129,19 @@ public class JOGLTest implements GLEventListener, KeyListener {
 		drawTriangle(gl, q2, q3, top, CYAN);
 		drawTriangle(gl, q3, q4, top, TEAL);
 		drawTriangle(gl, q4, q1, top, BLUE);
+		
+		// Draw a Sphere 
+		// This looks promising -- http://www.java-tips.org/other-api-tips/jogl/sphere-mapping-quadrics-in-opengl-nehe-tutorial-jogl-2.html
 
+		// Where is the Vertex? How do I move it...
+		GLUquadric qobj0 = glu.gluNewQuadric();
+		gl.glColor3f( 0f, 1f, 0f );
+		gl.glEnable(GL2.GL_LIGHT0);
+		//gl.glEnable(GL2.GL_LIGHTING);
+		glu.gluSphere(qobj0, 1.0, 50, 20);
+
+		// increasing rotation for the next iteration
+		
 		// Draw a Trapazoidal Cube
 		Point b_q1 = new Point(3.0, 3.0, -1.0);
 		Point b_q2 = new Point(3.0, 2.0, -1.0);
