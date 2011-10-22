@@ -21,7 +21,7 @@ import com.jogamp.opengl.util.Animator;
 import com.jogamp.opengl.util.gl2.GLUT;
 
 // Imported from local libraries
-
+//change here
 public class IndependentShapes implements GLEventListener, KeyListener {
 	float rotateT = 0.0f;
 	static GLU glu = new GLU();
