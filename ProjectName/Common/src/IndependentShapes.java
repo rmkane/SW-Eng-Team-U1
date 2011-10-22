@@ -380,12 +380,12 @@ public class IndependentShapes implements GLEventListener, KeyListener {
 
 	public void keyTyped(KeyEvent e) {
 		// Increase Rotation speed
-		if (e.getKeyCode() == KeyEvent.VK_UP) {
-			rotateT += 200f;
+		if (e.getKeyCode() == KeyEvent.VK_COMMA) {
+			rotateT += 1000f;
 		}
 		// Decrease Rotation speed
-		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
-			rotateT -= 200f;
+		if (e.getKeyCode() == KeyEvent.VK_PERIOD) {
+			rotateT -= 1000f;
 		}
 	}
 
