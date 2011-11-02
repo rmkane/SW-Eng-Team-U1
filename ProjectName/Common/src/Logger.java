@@ -10,7 +10,7 @@ public class Logger {
 
 	public void writeOut() {
 		try {
-			String filename = formatTime();
+			String filename = formatTime() + ".txt";
 			FileWriter outFile = new FileWriter(filename);
 			PrintWriter out = new PrintWriter(outFile);
 
@@ -18,10 +18,7 @@ public class Logger {
 			// Printwriter out = new PrintWriter(new FileWriter(args[0]));
 
 			// Write text to file
-			out.println("This is line 1");
-			out.println("This is line 2");
-			out.print("This is line3 part 1, ");
-			out.println("this is line 3 part 2");
+			out.println("Hello World");
 			out.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -40,7 +37,7 @@ public class Logger {
 		int s = now.get(Calendar.SECOND);
 		output = String.format("%s_%s_%s_%s_%s_%s", yyyy, fmt.format(mm),
 				fmt.format(dd), fmt.format(h), fmt.format(m), fmt.format(s));
-		return output + ".txt";
+		return output;
 	}
 
 	public static void main(String[] args) {
