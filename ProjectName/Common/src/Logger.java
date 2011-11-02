@@ -4,11 +4,11 @@ import java.util.Calendar;
 
 public class Logger {
 
-	public Logger() {
-		writeOut();
+	public Logger(String log) {
+		writeOut(log);
 	}
 
-	public void writeOut() {
+	public void writeOut(String log) {
 		try {
 			String filename = formatTime() + ".txt";
 			FileWriter outFile = new FileWriter(filename);
@@ -18,7 +18,7 @@ public class Logger {
 			// Printwriter out = new PrintWriter(new FileWriter(args[0]));
 
 			// Write text to file
-			out.println("Hello World");
+			out.print(log);
 			out.close();
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -39,9 +39,27 @@ public class Logger {
 				fmt.format(dd), fmt.format(h), fmt.format(m), fmt.format(s));
 		return output;
 	}
-
+	
+	
+	// Temporary
+	static String log = "";
+	static int i = 0;
+	
 	public static void main(String[] args) {
 
-		new Logger();
+		//int i = 0;
+		//String log = "";
+		
+		cmd("Rotated Triangle 60 Degrees");
+		cmd("Moved Triangle 5 pixels to the right");
+		cmd("Deleted a 4x8x2 Triangle");
+		cmd("Created a 3x9x6 Cube");
+		
+		new Logger(log);
+	}
+	
+	public static void cmd(String action) {
+		log += i + ". " + action + "\n"; 
+		i++;
 	}
 }
