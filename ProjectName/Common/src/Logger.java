@@ -1,14 +1,16 @@
 import java.io.*;
+import java.text.DecimalFormat;
 import java.util.Calendar;
 
 public class Logger {
 
-	public Logger(String fileName) {
-		writeOut(fileName);
+	public Logger() {
+		writeOut();
 	}
 
-	public void writeOut(String filename) {
+	public void writeOut() {
 		try {
+			String filename = formatTime();
 			FileWriter outFile = new FileWriter(filename);
 			PrintWriter out = new PrintWriter(outFile);
 
@@ -25,23 +27,24 @@ public class Logger {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public String formatTime() {
-		String s = "";
-		
-		double time = System.currentTimeMillis();
-		
-		Calendar cal = Calendar.getInstance();
-		int mm = cal.get(Calendar.MONTH) + 1;
-		int dd = cal.get(Calendar.DATE);
-		int yyyy = cal.get(Calendar.YEAR);
-		
-		
-		return s;
+		String output = "";
+		DecimalFormat fmt = new DecimalFormat("00");
+		Calendar now = Calendar.getInstance();
+		int yyyy = now.get(Calendar.YEAR);
+		int mm = now.get(Calendar.MONTH) + 1;
+		int dd = now.get(Calendar.DAY_OF_MONTH);
+		int h = now.get(Calendar.HOUR_OF_DAY);
+		int m = now.get(Calendar.MINUTE);
+		int s = now.get(Calendar.SECOND);
+		output = String.format("%s_%s_%s_%s_%s_%s", yyyy, fmt.format(mm),
+				fmt.format(dd), fmt.format(h), fmt.format(m), fmt.format(s));
+		return output + ".txt";
 	}
 
 	public static void main(String[] args) {
-		String out = Double.toString(System.currentTimeMillis());
-		new Logger(out);
+
+		new Logger();
 	}
 }
