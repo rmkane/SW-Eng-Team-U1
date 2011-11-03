@@ -1,0 +1,11 @@
+[Main]
+SizeX=19425
+SizeY=11175
+[1]
+Name=ClickMe
+Type=JButton
+Value=button_1
+X= 840
+Y= 720
+SizeX= 2280
+SizeY= 840

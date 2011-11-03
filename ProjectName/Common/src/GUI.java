@@ -59,37 +59,41 @@ public class GUI extends JFrame {
 	}
 
 	private void addComponents() {
-		/** This currently does not work :(
+
 		// Set up menu
 		this.setJMenuBar(menu);
 		menu.add(file);
 		menu.add(edit);
 		menu.add(help);
+		
 		// Set up panel
 		this.add(mainPanel);
 		mainPanel.setLayout(new GridBagLayout());
 		addComponent(mainPanel, shapesPanel, 0, 0, 1, 1, CENTER);
 		addComponent(mainPanel, viewer, 1, 0, 1, 1, CENTER);
 		addComponent(mainPanel, commandsPanel, 2, 0, 1, 1, CENTER);
+		
 		// Shapes Panel
 		shapesPanel.setLayout(new GridLayout(4, 1));
 		shapesPanel.add(circle);
 		shapesPanel.add(square);
 		shapesPanel.add(triangle);
 		shapesPanel.add(hexagon);
+		
 		// Canvas
 		viewer.add(canvas); // Shows up if I add the canvas to the root pane
 							// "this.add(canvas)"
+		
 		// Commands Panel
 		commandsPanel.setLayout(new GridLayout(4, 1));
 		commandsPanel.add(move);
 		commandsPanel.add(scale);
 		commandsPanel.add(rotate);
 		commandsPanel.add(zoom);
-		*/
+
 		
 		// Since JOGLTest is a 
-		canvas.addGLEventListener(new JOGLTest());
+		canvas.addGLEventListener(new IndependentShapes());
 		this.add(canvas);
 
 	}
