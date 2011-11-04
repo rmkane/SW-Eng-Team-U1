@@ -16,7 +16,7 @@ import com.jogamp.opengl.util.Animator;
 import java.awt.event.*;
 
 public class GUITest extends JFrame {
-
+	// Comment
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("3D GUI");
 		frame.setVisible(true);
