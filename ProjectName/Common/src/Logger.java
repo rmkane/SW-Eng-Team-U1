@@ -10,7 +10,7 @@ public class Logger {
 
 	public void writeOut(String log) {
 		try {
-			String filename = formatTime() + ".txt";
+			String filename = formatTime() + ".log";
 			FileWriter outFile = new FileWriter(filename);
 			PrintWriter out = new PrintWriter(outFile);
 

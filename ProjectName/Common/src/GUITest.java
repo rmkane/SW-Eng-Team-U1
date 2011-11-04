@@ -69,7 +69,7 @@ public class GUITest extends JFrame {
 				
 				JFileChooser chooser = new JFileChooser();
 				CustomFileFilter filter = new CustomFileFilter();
-				filter.addExtension("txt"); // Only choose text files
+				filter.addExtension("log"); // Only choose text files
 				filter.setDescription("Log Files");
 				chooser.setFileFilter(filter);
 				int returnVal = chooser.showOpenDialog(null);
