@@ -9,6 +9,12 @@ public class Logger {
 	private String log;
 
 	/** I have to create a Generate Shape Command: gen */
+   
+   /**
+    * Check out file://Common/extra/ReadLog.java
+    * It is not a runnable java file, but it shows how to read the log file
+    * We can look inot this further as a group.
+   */
 
 	// COMMANDS:
 	// Move, Rotate, Scale, Resize, Zoom
@@ -21,7 +27,7 @@ public class Logger {
 	// Cylinder
 	// Sphere
 	// Cone - We don't support this YET...
-	private final String rec = "rec", tri = "tri", hex = "tri", sqp = "sqp",
+	private final String rec = "rec", tri = "tri", hex = "hex", sqp = "sqp",
 			rep = "rep", cyl = "cyl", sph = "sph";
 
 	public Logger() {
@@ -108,9 +114,9 @@ public class Logger {
 		// Move Triangular-Prism to right 3, back 5
 		l.add("mov" + "tri" + "3,5,0");
 		// Rotate Triangular-Prism 45 Degrees around y-axis
-		l.add("rot" + "tri" + "+45,y");
+		l.add("rot" + "tri" + "y,45");
 		// Zoom in 200%
-		l.add("zom" + "+200");
+		l.add("zom" + "200");
 		// Scale Sphere to 10% of original size
 		l.add("scl" + "sph" + "10");
 		// Write-out
