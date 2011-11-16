@@ -12,7 +12,7 @@ import com.jogamp.opengl.util.FPSAnimator;
 import com.jogamp.opengl.util.gl2.GLUT;
 
 
-public class scene extends JFrame implements GLEventListener, KeyListener, MouseListener, MouseMotionListener, ActionListener
+public class Scene extends JFrame implements GLEventListener, KeyListener, MouseListener, MouseMotionListener, ActionListener
 {
 	//private GLU glu;
 	//private GLUT glut;
@@ -31,6 +31,8 @@ public class scene extends JFrame implements GLEventListener, KeyListener, Mouse
 	private static final int REFRESH_FPS = 60;
 	final FPSAnimator animator;
   	private float rotateT = 0.0f;
+  	
+  	private String curPos;
   
   
 	private final Color MAROON = new Color(128, 0, 0);
@@ -162,7 +164,7 @@ public class scene extends JFrame implements GLEventListener, KeyListener, Mouse
   
 
  
-  public scene()
+  public Scene()
   {
 	  GLCanvas canvas = new GLCanvas();
 	  setCanvas(canvas);	
@@ -198,7 +200,7 @@ public class scene extends JFrame implements GLEventListener, KeyListener, Mouse
 
   public static void main(String[] args)
   {
-	  scene joglmain = new scene();
+	  Scene joglmain = new Scene();
 	  joglmain.run();
 	  //joglmain.animator.start();
   }
@@ -336,12 +338,26 @@ public class scene extends JFrame implements GLEventListener, KeyListener, Mouse
 		mouseX = x;
 		mouseY = y;
 		
-		//System.out.println("(" + mouseX + "," + mouseY + ")");
+		setMouseX(x);
+		setMouseY(y);
 		
 		canvas.display();
+		
+		System.out.println("Dragged:" + getMouseX() + ", " + getMouseY());
+		
+		
+		
 	}
 	
-	
+	/*************** Get mouse cursor position ****************/
+	public String getCurPos() { return curPos; }
+	public void setCurPos(String curPos) { this.curPos = curPos; }
+	public int getMouseX() { return mouseX; }
+	public void setMouseX(int mouseX) {	this.mouseX = mouseX; }
+	public int getMouseY() { return mouseY; }
+	public void setMouseY(int mouseY) {	this.mouseY = mouseY; }
+	/**********************************************************/
+
 	public void keyPressed(KeyEvent key) { }
 	public void keyTyped(KeyEvent key) { }
 	public void keyReleased(KeyEvent key) { }
@@ -350,6 +366,8 @@ public class scene extends JFrame implements GLEventListener, KeyListener, Mouse
 	public void mouseExited(MouseEvent mouse) {	}
 	
 	public void mouseMoved(MouseEvent mouse) {
+		
+		setCurPos(" Current Position: (" + getMouseX() + ", " + getMouseY() + ")  |  Selected: x  |  Total Shapes: x");
 		/**
 		int x = mouse.getX();
 		int y = mouse.getY();

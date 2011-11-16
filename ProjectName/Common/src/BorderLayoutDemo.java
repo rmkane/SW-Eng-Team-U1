@@ -24,8 +24,15 @@ public class BorderLayoutDemo extends JPanel implements ActionListener {
 
 	private static final long serialVersionUID = 1L;
 
+	Scene s;
+	GLCanvas c;
+	
 	public BorderLayoutDemo() {
 
+		s = new Scene();
+		c = s.getCanvas();
+		c.addGLEventListener(s);
+		
 		initUI();
 	}
 
@@ -155,11 +162,7 @@ public class BorderLayoutDemo extends JPanel implements ActionListener {
 		// right now
 		// canvas.setBorder(LineBorder.createGrayLineBorder());
 
-		// scene canvas = new scene();
-
-		scene s = new scene();
-		GLCanvas c = s.getCanvas();
-		c.addGLEventListener(s);
+		// scene canvas = new scene()
 
 		centerPanel.add(c, BorderLayout.CENTER);
 
@@ -172,8 +175,9 @@ public class BorderLayoutDemo extends JPanel implements ActionListener {
 		// centerPanel.add(canvas, BorderLayout.CENTER);
 		centerPanel.add(logText, BorderLayout.PAGE_END);
 
-		JLabel statusbar = new JLabel(
-				" Current Position: (xxx , yyy)  |  Selected: x  |  Total Shapes: x");
+		JLabel statusbar = new JLabel(" Current Position: (xxx, yyy)  |  Selected: x  |  Total Shapes: x");
+		System.out.println("um.." + s.getCurPos());
+		//statusbar.setText(s.getCurPos());
 		statusbar.setPreferredSize(new Dimension(-1, 22));
 		statusbar.setBorder(LineBorder.createGrayLineBorder());
 		mainPanel.add(statusbar, BorderLayout.PAGE_END);
