@@ -162,15 +162,17 @@ public class scene extends JFrame implements GLEventListener, KeyListener, Mouse
   
 
  
-  public scene(GLCanvas canvas)
+  public scene()
   {
-	  	//super("Testing Drag-and-Drop");
+	  GLCanvas canvas = new GLCanvas();
+	  setCanvas(canvas);	
+	  //super("Testing Drag-and-Drop");
 
     	//canvas = new GLCanvas();
-    	canvas.addGLEventListener(this);
-    	canvas.addKeyListener(this);
-		canvas.addMouseListener(this);
-		canvas.addMouseMotionListener(this);
+    	this.canvas.addGLEventListener(this);
+    	this.canvas.addKeyListener(this);
+    	this.canvas.addMouseListener(this);
+    	this.canvas.addMouseMotionListener(this);
     
 	    //JFrame frame = new JFrame("THIS IS A JFRAME");
 	    //frame.setSize(900, 700);
@@ -196,8 +198,7 @@ public class scene extends JFrame implements GLEventListener, KeyListener, Mouse
 
   public static void main(String[] args)
   {
-      GLCanvas canvas = new GLCanvas();
-	  scene joglmain = new scene(canvas);
+	  scene joglmain = new scene();
 	  joglmain.run();
 	  //joglmain.animator.start();
   }
@@ -313,7 +314,7 @@ public class scene extends JFrame implements GLEventListener, KeyListener, Mouse
 		
 		System.out.println("Mouse pressed at x=" + mouseX + ", y=" + mouseY);
 		mouseButton = mouse.getButton();
-		canvas.display();
+		getCanvas().display();
 	}
 
 	public void mouseReleased(MouseEvent mouse) {
@@ -362,4 +363,14 @@ public class scene extends JFrame implements GLEventListener, KeyListener, Mouse
 	
 	public void actionPerformed(ActionEvent action) { }
 
-	public void dispose(GLAutoDrawable drawable) { }}
+	public void dispose(GLAutoDrawable drawable) { }
+
+
+	public GLCanvas getCanvas() {
+		return canvas;
+	}
+
+
+	public void setCanvas(GLCanvas canvas) {
+		this.canvas = canvas;
+	}}
