@@ -54,7 +54,7 @@ public class GUI extends JFrame {
 		this.setSize(800, 560);
 		this.setLocationRelativeTo(null);
 		this.setVisible(true);
-		animator.start();
+		//animator.start();
 		canvas.requestFocus();
 	}
 
