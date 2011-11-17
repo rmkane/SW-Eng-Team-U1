@@ -20,36 +20,50 @@ import javax.swing.JTextArea;
 import javax.swing.JToolBar;
 import javax.swing.border.LineBorder;
 
-public class BorderLayoutDemo extends JPanel implements ActionListener {
+public class BorderLayoutDemo extends JPanel {
 
 	private static final long serialVersionUID = 1L;
 
-	Scene s;
-	GLCanvas c;
-	
-	public BorderLayoutDemo() {
+	private Scene s;
+	private GLCanvas c;
+	private JFrame frame;
+	// Menu
+	private JMenuBar menubar;
+	private JMenu file, edit, help;
+	private JMenuItem save, load, exit, blank, about;
+	// Panels
+	private JPanel mainPanel, rightToolbar, currentShapes, rotatePane,
+			resizePane, aestheticsPane, centerPanel;
+	// Shapes Toolbar
+	private JToolBar shapesToolbar;
+	private JButton cube_b, triprism_b, pyramid_b, cylinder_b, sphere_b,
+			hexprism_b, line_b;
+	private JTextArea logText;
+	private JLabel statusbar;
 
+	public BorderLayoutDemo() {
 		s = new Scene();
 		c = s.getCanvas();
 		c.addGLEventListener(s);
-		
-		initUI();
+
+		init();
 	}
 
-	public final void initUI() {
+	public final void init() {
 
-		JFrame frame = new JFrame("3D GUI");
+		frame = new JFrame("3D GUI");
 		// frame.setVisible(true);
 		frame.setSize(900, 700);
+		frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		JMenuBar menubar = new JMenuBar();
+		menubar = new JMenuBar();
 		frame.setJMenuBar(menubar);
 
 		// File
-		JMenu file = new JMenu("File");// Items under File
-		JMenu edit = new JMenu("Edit");// Items under Edit
-		JMenu help = new JMenu("Help");
+		file = new JMenu("File");// Items under File
+		edit = new JMenu("Edit");// Items under Edit
+		help = new JMenu("Help");
 
 		menubar.add(file);
 		menubar.add(edit);
@@ -57,9 +71,9 @@ public class BorderLayoutDemo extends JPanel implements ActionListener {
 													// side
 		menubar.add(help);
 
-		JMenuItem save = new JMenuItem("Save");
-		JMenuItem load = new JMenuItem("Load");
-		JMenuItem exit = new JMenuItem("Exit");
+		save = new JMenuItem("Save");
+		load = new JMenuItem("Load");
+		exit = new JMenuItem("Exit");
 
 		file.add(save);
 		file.add(load);
@@ -67,12 +81,12 @@ public class BorderLayoutDemo extends JPanel implements ActionListener {
 
 		// Edit
 
-		JMenuItem blank = new JMenuItem("Blank Button");
+		blank = new JMenuItem("Blank Button");
 		edit.add(blank);
 
 		// Help
 
-		JMenuItem about = new JMenuItem("About");
+		about = new JMenuItem("About");
 		help.add(about);
 
 		// Adding the function of the action to the button
@@ -82,12 +96,12 @@ public class BorderLayoutDemo extends JPanel implements ActionListener {
 		save.addActionListener(new SaveAction());
 		load.addActionListener(new LoadAction());
 
-		JPanel mainPanel = new JPanel();
+		mainPanel = new JPanel();
 		mainPanel.setLayout(new BorderLayout());
 		frame.add(mainPanel);
 
 		// creates left-hand toolbar
-		JToolBar shapesToolbar = new JToolBar(JToolBar.VERTICAL);
+		shapesToolbar = new JToolBar(JToolBar.VERTICAL);
 		shapesToolbar.setFloatable(false);
 		mainPanel.add(shapesToolbar, BorderLayout.LINE_START);
 
@@ -95,13 +109,13 @@ public class BorderLayoutDemo extends JPanel implements ActionListener {
 		shapesToolbar.setBorder(LineBorder.createGrayLineBorder());
 
 		// creates buttons for each shape
-		JButton cube_b = new JButton("[cube]");
-		JButton triprism_b = new JButton("[tri prism]");
-		JButton pyramid_b = new JButton("[pyramid]");
-		JButton cylinder_b = new JButton("[cylinder]");
-		JButton sphere_b = new JButton("[sphere]");
-		JButton hexprism_b = new JButton("[hex prism]");
-		JButton line_b = new JButton("[line]");
+		cube_b = new JButton("[cube]");
+		triprism_b = new JButton("[tri prism]");
+		pyramid_b = new JButton("[pyramid]");
+		cylinder_b = new JButton("[cylinder]");
+		sphere_b = new JButton("[sphere]");
+		hexprism_b = new JButton("[hex prism]");
+		line_b = new JButton("[line]");
 
 		// adds buttons to left-hand toolbar
 		shapesToolbar.add(cube_b);
@@ -113,7 +127,7 @@ public class BorderLayoutDemo extends JPanel implements ActionListener {
 		shapesToolbar.add(line_b);
 
 		// creates right-hand toolbar
-		JPanel rightToolbar = new JPanel();
+		rightToolbar = new JPanel();
 		rightToolbar.setPreferredSize(new Dimension(150, 0));
 		// rightToolbar.setLayout(new GridLayout(4,1,0,15));
 		rightToolbar.setLayout(new BoxLayout(rightToolbar, BoxLayout.Y_AXIS));
@@ -122,7 +136,7 @@ public class BorderLayoutDemo extends JPanel implements ActionListener {
 		mainPanel.add(rightToolbar, BorderLayout.LINE_END);
 
 		// current shapes panel
-		JPanel currentShapes = new JPanel();
+		currentShapes = new JPanel();
 		currentShapes.setPreferredSize(new Dimension(100, 130));
 		rightToolbar.add(currentShapes);
 		currentShapes.setBorder(LineBorder.createGrayLineBorder());
@@ -130,7 +144,7 @@ public class BorderLayoutDemo extends JPanel implements ActionListener {
 		new CurrentShapesPanel(currentShapes);
 
 		// rotation panel
-		JPanel rotatePane = new JPanel();
+		rotatePane = new JPanel();
 		rotatePane.setMaximumSize(new Dimension(150, 110));
 		rightToolbar.add(rotatePane);
 		rotatePane.setBorder(LineBorder.createGrayLineBorder());
@@ -139,13 +153,13 @@ public class BorderLayoutDemo extends JPanel implements ActionListener {
 		new RotatePanel(rotatePane);
 
 		// resize panel
-		JPanel resizePane = new JPanel();
+		resizePane = new JPanel();
 		resizePane.setPreferredSize(new Dimension(100, 100));
 		rightToolbar.add(resizePane);
 		resizePane.setBorder(LineBorder.createGrayLineBorder());
 
 		// aesthetics panel
-		JPanel aestheticsPane = new JPanel();
+		aestheticsPane = new JPanel();
 		aestheticsPane.setPreferredSize(new Dimension(100, 100));
 		rightToolbar.add(aestheticsPane);
 		aestheticsPane.setBorder(LineBorder.createGrayLineBorder());
@@ -153,7 +167,7 @@ public class BorderLayoutDemo extends JPanel implements ActionListener {
 		new AestheticsPanel(aestheticsPane);
 
 		// creates center panel
-		JPanel centerPanel = new JPanel();
+		centerPanel = new JPanel();
 		centerPanel.setLayout(new BorderLayout());
 
 		mainPanel.add(centerPanel, BorderLayout.CENTER);
@@ -168,16 +182,17 @@ public class BorderLayoutDemo extends JPanel implements ActionListener {
 
 		frame.setVisible(true);
 
-		JTextArea logText = new JTextArea(); // **LOGGER PANEL**
+		logText = new JTextArea(); // **LOGGER PANEL**
 		logText.setBorder(LineBorder.createGrayLineBorder());
 		logText.setPreferredSize(new Dimension(0, 150));
 
 		// centerPanel.add(canvas, BorderLayout.CENTER);
 		centerPanel.add(logText, BorderLayout.PAGE_END);
 
-		JLabel statusbar = new JLabel(" Current Position: (xxx, yyy)  |  Selected: x  |  Total Shapes: x");
+		statusbar = new JLabel(
+				" Current Position: (xxx, yyy)  |  Selected: x  |  Total Shapes: x");
 		System.out.println("um.." + s.getCurPos());
-		//statusbar.setText(s.getCurPos());
+		// statusbar.setText(s.getCurPos());
 		statusbar.setPreferredSize(new Dimension(-1, 22));
 		statusbar.setBorder(LineBorder.createGrayLineBorder());
 		mainPanel.add(statusbar, BorderLayout.PAGE_END);
@@ -185,7 +200,7 @@ public class BorderLayoutDemo extends JPanel implements ActionListener {
 		// frame.add(new JTextArea(), BorderLayout.CENTER);
 	}
 
-	public void actionPerformed(ActionEvent ae) {
+	public void actionPerformed(ActionEvent e) {
 	}
 
 	public static void main(String[] args) {
@@ -270,4 +285,11 @@ public class BorderLayoutDemo extends JPanel implements ActionListener {
 		}
 	}
 
+	public JLabel getStatusbar() {
+		return statusbar;
+	}
+
+	public void setStatusbar(JLabel statusbar) {
+		this.statusbar = statusbar;
+	}
 }
