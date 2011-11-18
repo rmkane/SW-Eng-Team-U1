@@ -388,8 +388,6 @@ public class Scene extends JFrame implements GLEventListener, KeyListener,
 		mouseX = x; mouseY = y;
 		
 		setCurPos("(" + mouseX + "," + mouseY + ")");
-		  
-		//System.out.println(getCurPos());
 	}
 	
 	
