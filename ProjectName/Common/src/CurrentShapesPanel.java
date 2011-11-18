@@ -9,8 +9,10 @@ import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 import javax.media.opengl.awt.GLCanvas;
+import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
+import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
@@ -33,31 +35,35 @@ public class CurrentShapesPanel implements ListSelectionListener  {
 	
 	public CurrentShapesPanel(JPanel panel)
 	{
-	    panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+	    panel.setLayout(new BorderLayout());
+	    
+
+	    JLabel resize_title = new JLabel("S H A P E S");
+	    resize_title.setOpaque(true);
+	    resize_title.setBackground(Color.lightGray);
+	    
+
+	    panel.add(resize_title, BorderLayout.PAGE_START);
+	    
+	    
 
 	    JPanel currentShapesPanel = new JPanel();
 	    panel.add(currentShapesPanel);
 	    
 	    
-	    JLabel shapes_title = new JLabel("Current Shapes");
-	    shapes_title.setPreferredSize(new Dimension(132, 17));
-	    shapes_title.setOpaque(true);
-	    shapes_title.setBackground(Color.lightGray);
-	    currentShapesPanel.add(shapes_title);
 	    
-	    
-	    String[] data = {"Shape 1", "Shape 2", "Shape 3", "Shape 4", "Shape 5"};
+	    String[] data = {"( shape name )", "( shape name )", "( shape name )", 
+	    		"( shape name )", "( shape name )"};
 	    JList list = new JList(data);
 	    list.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
         //list.setSelectedIndex(0);
         list.addListSelectionListener(this);
-        list.setFixedCellWidth(130);
-        JScrollPane listScrollPane = new JScrollPane(list);
 	    
 	    currentShapesPanel.add(list);
+	    currentShapesPanel.add(Box.createVerticalGlue());
 
-
-
+	    list.setFixedCellHeight(25);
+	    list.setFixedCellWidth(140);
 	}
 	
 

@@ -27,35 +27,43 @@ import javax.swing.border.LineBorder;
 
 public class RotatePanel  {
 	
+    JPanel buttonsPanel = new JPanel();
+    JPanel blankPanel = new JPanel();
+	
 	public RotatePanel(JPanel panel)
 	{
-	    panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+		
+	    panel.setLayout(new BorderLayout());
+	    
 
+	    JLabel resize_title = new JLabel("R O T A T I O N");
+	    resize_title.setOpaque(true);
+	    resize_title.setBackground(Color.lightGray);
+	    
+
+	    panel.add(resize_title, BorderLayout.PAGE_START);
+	    
 	    JPanel rotatePanel1 = new JPanel();
 	    rotatePanel1.setLayout(new GridBagLayout());
-	    panel.add(rotatePanel1);
+	    panel.add(rotatePanel1, BorderLayout.LINE_START);
 	    
 	    
 	    GridBagConstraints c = new GridBagConstraints();
 	    c.fill = GridBagConstraints.HORIZONTAL;
 	    c.insets = new Insets(4, 4, 4, 4); // 5-pixel margins on all sides
 	    c.anchor = GridBagConstraints.NORTHWEST;
+
 	    
 
+	    
 	    c.gridx = 1;
 	    c.gridy = 0;
 	    c.gridwidth = 3;
 	    c.gridheight = 1;
 	    c.weightx = c.weighty = 1.0;
+	    rotatePanel1.add(new JLabel(""), c);
 	    
 	    
-	    JLabel rotate_title = new JLabel("Rotate Shape");
-	    rotate_title.setOpaque(true);
-	    rotate_title.setBackground(Color.lightGray);
-	    rotatePanel1.add(rotate_title, c);
-
-	    
-
 	    c.gridx = 1;
 	    c.gridy = 1;
 	    c.gridwidth = 3;
@@ -160,7 +168,7 @@ public class RotatePanel  {
 	     -------START / PAUSE BUTTONS------
 	     **********************************/
 	    JPanel rotatePanel2 = new JPanel();
-	    panel.add(rotatePanel2);
+	    panel.add(rotatePanel2, BorderLayout.PAGE_END);
 	    
 	    JButton start_b = new JButton("start");
 	    JButton pause_b = new JButton("pause");
@@ -168,11 +176,13 @@ public class RotatePanel  {
 	    pause_b.setFont(new Font("sansserif",Font.PLAIN,11));
 	    
 	   
-	    rotatePanel2.setLayout(new GridLayout(1,2,7,0));
-	    rotatePanel2.setMaximumSize(new Dimension(135, 40));
-	    rotatePanel2.add(start_b, c);
-	    rotatePanel2.add(pause_b, c);
+	    buttonsPanel.setLayout(new GridLayout(1,2,7,0));
+	    buttonsPanel.add(start_b, c);
+	    buttonsPanel.add(pause_b, c);
 
+	    rotatePanel2.add(buttonsPanel, BorderLayout.PAGE_START);
+	    blankPanel.setBorder(new EmptyBorder(10, 10, 15, 10) );
+	    rotatePanel2.add(blankPanel, BorderLayout.PAGE_END);
 
 	}
 	
@@ -181,7 +191,7 @@ public class RotatePanel  {
 	{
 		JFrame frame = new JFrame("3D GUI");
 
-		//frame.setSize(150, 230);
+		frame.setSize(150, 230);
 
 		
 		frame.addWindowListener(new WindowAdapter() {
