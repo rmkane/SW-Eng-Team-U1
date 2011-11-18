@@ -16,6 +16,7 @@ public class Scene extends JFrame implements GLEventListener, KeyListener,
 	// private GLU glu;
 	// private GLUT glut;
 	// private GLCapabilities caps;
+	//test
 	private GLCanvas canvas;
 
 	private int winW = 512, winH = 512;
