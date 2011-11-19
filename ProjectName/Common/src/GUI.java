@@ -36,6 +36,7 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JSlider;
 import javax.swing.JTextArea;
 import javax.swing.JToolBar;
@@ -57,7 +58,7 @@ public class GUI extends JPanel implements MouseListener, MouseMotionListener {
 
 	// Panels
 	private JPanel mainPanel, rightToolbar, currentShapes, rotatePane,
-			resizePane, aestheticsPane, centerPanel;
+			resizePane, aestheticsPane, centerPanel, bottomCenter;
 
 	// Shapes Toolbar
 	private JToolBar shapesToolbar;
@@ -66,6 +67,8 @@ public class GUI extends JPanel implements MouseListener, MouseMotionListener {
 	private Image img_triPri, img_sqrPri, img_hexPri, img_triPyr, img_sqrPyr,
 			img_cylider, img_sphere, img_line;
 	private JTextArea logText;
+	private JScrollPane logScroll;
+	private JSlider zoom;
 	private JLabel statusBar;
 
 	public GUI() {
@@ -276,14 +279,17 @@ public class GUI extends JPanel implements MouseListener, MouseMotionListener {
 
 		centerPanel.add(c, BorderLayout.CENTER);
 
-		JPanel bottomCenter = new JPanel();
+		bottomCenter = new JPanel();
 		bottomCenter.setLayout(new BorderLayout());
 
 		logText = new JTextArea(); // **LOGGER PANEL**
+		logText.setLineWrap(true);
+		logScroll = new JScrollPane(logText);
+		logScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 		logText.setBorder(LineBorder.createGrayLineBorder());
-		logText.setPreferredSize(new Dimension(0, 135));
+		logText.setPreferredSize(new Dimension(0, 150));
 
-		JSlider zoom = new JSlider(JSlider.HORIZONTAL, 5, 200, 100);
+		zoom = new JSlider(JSlider.HORIZONTAL, 5, 200, 100);
 
 		zoom.setSnapToTicks(true);
 		zoom.setMajorTickSpacing(25);
@@ -291,15 +297,12 @@ public class GUI extends JPanel implements MouseListener, MouseMotionListener {
 		zoom.setPaintTicks(true);
 		// zoom.setPaintLabels(true);
 
-		bottomCenter.add(logText, BorderLayout.PAGE_END);
+		bottomCenter.add(logScroll, BorderLayout.PAGE_END);
+		JLabel lbl_log = new JLabel(" L O G G E R:");
+		lbl_log.setFont(new Font("sansserif",Font.BOLD,18));
+		bottomCenter.add(lbl_log, BorderLayout.LINE_START);
 		bottomCenter.add(zoom, BorderLayout.LINE_END);
 		centerPanel.add(bottomCenter, BorderLayout.PAGE_END);
-
-		logText = new JTextArea(); // **LOGGER PANEL**
-		logText.setBorder(LineBorder.createGrayLineBorder());
-		logText.setPreferredSize(new Dimension(0, 150));
-
-		centerPanel.add(logText, BorderLayout.PAGE_END);
 
 		statusBar = new JLabel();
 		statusBar
