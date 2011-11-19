@@ -12,7 +12,7 @@ import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-
+ 
 import javax.media.opengl.awt.GLCanvas;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
