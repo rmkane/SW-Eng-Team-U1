@@ -274,7 +274,7 @@ public class Scene extends JFrame implements GLEventListener, KeyListener,
 		gl.glLoadIdentity();
 		gl.glTranslatef(tx, ty, -10.0f);
 
-		pyramid(gl);
+		pyramid(gl, 3, 5, 2); // Create a 3x5x2 Square Pyramid!
 
 		rotateAngle += 1.0f;
 	}
@@ -283,7 +283,7 @@ public class Scene extends JFrame implements GLEventListener, KeyListener,
 	/********************************* SHAPES ******************************/
 	/***********************************************************************/
 	// ////////////////////////////////////////////
-	public void pyramid(GL2 gl) {
+	public void pyramid(GL2 gl, double height, double width, double length) {
 		// ////////////////////////////////////////////
 		// GL2 gl;
 		gl.glLoadIdentity();
@@ -309,11 +309,11 @@ public class Scene extends JFrame implements GLEventListener, KeyListener,
 		}
 
 		// vertices
-		Point top = new Point(0.0, 1.0, 0.0);
-		Point q1 = new Point(-1.0, -1.0, 1.0);
-		Point q2 = new Point(1.0, -1.0, 1.0);
-		Point q3 = new Point(1.0, -1.0, -1.0);
-		Point q4 = new Point(-1.0, -1.0, -1.0);
+		Point top = new Point(0.0, height/2, 0.0);
+		Point q1 = new Point(-width/2, -height/2, length/2);
+		Point q2 = new Point(width/2, -height/2, length/2);
+		Point q3 = new Point(width/2, -height/2, -length/2);
+		Point q4 = new Point(-width/2, -height/2, -length/2);
 
 		// create shape
 		drawSquare(gl, q2, q1, q4, q3, MAROON, RED, 5); // base
