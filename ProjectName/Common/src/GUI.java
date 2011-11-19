@@ -10,6 +10,7 @@
  ***********************************************************************/
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
@@ -141,7 +142,17 @@ public class GUI extends JPanel implements MouseListener, MouseMotionListener {
 		btn_sqrPyr = new JButton();
 		btn_cylider = new JButton();
 		btn_sphere = new JButton();
-		btn_line = new JButton("line");
+		btn_line = new JButton();
+
+		// change background color of buttons
+		btn_triPri.setBackground(Color.WHITE);
+		btn_sqrPri.setBackground(Color.WHITE);
+		btn_hexPri.setBackground(Color.WHITE);
+		btn_triPyr.setBackground(Color.WHITE);
+		btn_sqrPyr.setBackground(Color.WHITE);
+		btn_cylider.setBackground(Color.WHITE);
+		btn_sphere.setBackground(Color.WHITE);
+		btn_line.setBackground(Color.WHITE);
 
 		// adds images to the buttons
 		try {
@@ -192,6 +203,13 @@ public class GUI extends JPanel implements MouseListener, MouseMotionListener {
 			btn_sphere.setIcon(new ImageIcon(img_sphere));
 		} catch (IOException ex) {
 			btn_sphere.setText("Sphere");
+		}
+		try {
+			img_line = ImageIO.read(getClass()
+					.getResource("resources/line.png"));
+			btn_line.setIcon(new ImageIcon(img_line));
+		} catch (IOException ex) {
+			btn_line.setText("Line");
 		}
 
 		// adds buttons to left-hand toolbar
