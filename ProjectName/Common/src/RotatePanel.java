@@ -6,10 +6,15 @@ import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.Insets;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
 import javax.media.opengl.awt.GLCanvas;
+import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -17,10 +22,14 @@ import javax.swing.JCheckBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JSpinner;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.SpinnerListModel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 
 
@@ -29,6 +38,12 @@ public class RotatePanel  {
 	
     JPanel buttonsPanel = new JPanel();
     JPanel blankPanel = new JPanel();
+    
+	//private Scene s;
+	//private GLCanvas c;
+    
+    private Scene s = GUI.getScene();
+	
 	
 	public RotatePanel(JPanel panel)
 	{
@@ -48,119 +63,180 @@ public class RotatePanel  {
 	    panel.add(rotatePanel1, BorderLayout.LINE_START);
 	    
 	    
-	    GridBagConstraints c = new GridBagConstraints();
-	    c.fill = GridBagConstraints.HORIZONTAL;
-	    c.insets = new Insets(4, 4, 4, 4); // 5-pixel margins on all sides
-	    c.anchor = GridBagConstraints.NORTHWEST;
+	    GridBagConstraints constraints = new GridBagConstraints();
+	    constraints.fill = GridBagConstraints.HORIZONTAL;
+	    constraints.insets = new Insets(4, 4, 4, 4); // 5-pixel margins on all sides
+	    constraints.anchor = GridBagConstraints.NORTHWEST;
 
 	    
 
 	    
-	    c.gridx = 1;
-	    c.gridy = 0;
-	    c.gridwidth = 3;
-	    c.gridheight = 1;
-	    c.weightx = c.weighty = 1.0;
-	    rotatePanel1.add(new JLabel(""), c);
+	    constraints.gridx = 1;
+	    constraints.gridy = 0;
+	    constraints.gridwidth = 3;
+	    constraints.gridheight = 1;
+	    constraints.weightx = constraints.weighty = 1.0;
+	    rotatePanel1.add(new JLabel(""), constraints);
 	    
 	    
-	    c.gridx = 1;
-	    c.gridy = 1;
-	    c.gridwidth = 3;
-	    c.gridheight = 1;
-	    c.weightx = c.weighty = 1.0;
-	    rotatePanel1.add(new JLabel("Axis of Rotation:"), c);
+	    constraints.gridx = 1;
+	    constraints.gridy = 1;
+	    constraints.gridwidth = 3;
+	    constraints.gridheight = 1;
+	    constraints.weightx = constraints.weighty = 1.0;
+	    rotatePanel1.add(new JLabel("Axis of Rotation:"), constraints);
 	    
 	    
 	    /**********************************
 	     -----------CHECK BUTTONS----------
 	     **********************************/
-        JCheckBox x_cb = new JCheckBox("x");
-	    c.gridx = 1;
-	    c.gridy = 2;
-	    c.gridwidth = 1;
-	    c.gridheight = 1;
-	    c.weightx = c.weighty = 1.0;
-	    rotatePanel1.add(x_cb, c);
+        final JCheckBox x_cb = new JCheckBox("x");
+	    constraints.gridx = 1;
+	    constraints.gridy = 2;
+	    constraints.gridwidth = 1;
+	    constraints.gridheight = 1;
+	    constraints.weightx = constraints.weighty = 1.0;
+	    rotatePanel1.add(x_cb, constraints);
 
-	    JCheckBox y_cb = new JCheckBox("y");
-	    c.gridx = 2;
-	    c.gridy = 2;
-	    c.gridwidth = 1;
-	    c.gridheight = 1;
-	    c.weightx = c.weighty = 1.0;
-	    rotatePanel1.add(y_cb, c);
+	    final JCheckBox y_cb = new JCheckBox("y");
+	    constraints.gridx = 2;
+	    constraints.gridy = 2;
+	    constraints.gridwidth = 1;
+	    constraints.gridheight = 1;
+	    constraints.weightx = constraints.weighty = 1.0;
+	    rotatePanel1.add(y_cb, constraints);
 	    
-	    JCheckBox z_cb = new JCheckBox("z");
-	    c.gridx = 3;
-	    c.gridy = 2;
-	    c.gridwidth = 1;
-	    c.gridheight = 1;
-	    c.weightx = c.weighty = 1.0;
-	    rotatePanel1.add(z_cb, c);
+	    final JCheckBox z_cb = new JCheckBox("z");
+	    constraints.gridx = 3;
+	    constraints.gridy = 2;
+	    constraints.gridwidth = 1;
+	    constraints.gridheight = 1;
+	    constraints.weightx = constraints.weighty = 1.0;
+	    rotatePanel1.add(z_cb, constraints);
+	    
+
+	    ItemListener listener = new ItemListener()
+	    {
+	        public void itemStateChanged(ItemEvent e) {
+	        	s.setXAxisRotation(0.0f);
+	        	s.setYAxisRotation(0.0f);
+	        	s.setZAxisRotation(0.0f);
+	        	
+	        	if (x_cb.isSelected())
+	        		s.setXAxisRotation(1.0f);
+	        	if (y_cb.isSelected())
+	        		s.setYAxisRotation(1.0f);
+	        	if (z_cb.isSelected())
+	        		s.setZAxisRotation(1.0f);
+	        }
+	    };
+	    
+	    
+	    x_cb.addItemListener(listener);
+	    y_cb.addItemListener(listener);
+	    z_cb.addItemListener(listener);
+	    
 	    
 	    
 	    /**********************************
 	     ------------BLANK SPACE-----------
 	     **********************************/
-	    c.gridx = 1;
-	    c.gridy = 3;
-	    c.gridwidth = 3;
-	    c.gridheight = 1;
-	    c.weightx = c.weighty = 1.0;
-	    rotatePanel1.add( Box.createHorizontalStrut( 10 ), c );
-	    rotatePanel1.add( Box.createVerticalStrut( 10 ), c );
+	    constraints.gridx = 1;
+	    constraints.gridy = 3;
+	    constraints.gridwidth = 3;
+	    constraints.gridheight = 1;
+	    constraints.weightx = constraints.weighty = 1.0;
+	    rotatePanel1.add( Box.createHorizontalStrut( 10 ), constraints );
+	    rotatePanel1.add( Box.createVerticalStrut( 10 ), constraints );
 	    
 	    
 	    /**********************************
-	     ----------TEXT INPUT BOXES--------
+	     -------------SPINNERS-------------
 	     **********************************/
 	    //number of rotations
-	    c.gridx = 1;
-	    c.gridy = 4;
-	    c.gridwidth = 2;
-	    c.gridheight = 1;
-	    c.weightx = c.weighty = 1.0;
-	    rotatePanel1.add(new JLabel("Num. Rotations:"), c);
+	    constraints.gridx = 1;
+	    constraints.gridy = 4;
+	    constraints.gridwidth = 2;
+	    constraints.gridheight = 1;
+	    constraints.weightx = constraints.weighty = 0.0;
+	    rotatePanel1.add(new JLabel("Num. Rotations:"), constraints);
+	    
+        
+        
+	    Integer[] numRotList = new Integer[25];
+	    for (int i = 0; i < 25; i++)
+	    	numRotList[i] = i+1;
+	    
+	    Integer[] speedList = new Integer[20];
+	    for (int i = 0; i < 20; i++)
+	    	speedList[i] = i+1;
+	    
+	    
+	    SpinnerListModel numRotModel = new SpinnerListModel(numRotList);
+	    SpinnerListModel speedModel = new SpinnerListModel(speedList);
+
+	    
+	    final JSpinner numRotations = new JSpinner(numRotModel);
+	    ((JSpinner.DefaultEditor)numRotations.getEditor()).getTextField().setColumns(2);
+	    ((JSpinner.DefaultEditor)numRotations.getEditor()).getTextField().setEditable(false); 
+	    numRotations.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.GRAY));
+	    
+	    
+	    /*
+	    ChangeListener listener = new ChangeListener() {
+	        public void stateChanged(ChangeEvent e) {
+	          System.out.println("Source: " + e.getSource());
+	        }
+	      };
+	    
+	      
+	    numRotations.addChangeListener(listener);
+	    */
 	    
 
-        JTextField numRotations_tf = new JTextField();
-        JTextField speed = new JTextField();
+	    final JSpinner speed = new JSpinner(speedModel);
+	    ((JSpinner.DefaultEditor)speed.getEditor()).getTextField().setEditable(false); 
+	    speed.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.GRAY));
 
-	    c.gridx = 3;
-	    c.gridy = 4;
-	    c.gridwidth = 1;
-	    c.gridheight = 1;
-	    c.weightx = c.weighty = 0.0;
-	    rotatePanel1.add(numRotations_tf, c);
+        
+
+	    constraints.gridx = 3;
+	    constraints.gridy = 4;
+	    constraints.gridwidth = 2;
+	    constraints.gridheight = 1;
+	    constraints.weightx = constraints.weighty = 1.0;
+	    rotatePanel1.add(numRotations, constraints);
+	    
 	    
 	    //speed
-	    c.gridx = 1;
-	    c.gridy = 5;
-	    c.gridwidth = 2;
-	    c.gridheight = 1;
-	    c.weightx = c.weighty = 0.0;
-	    rotatePanel1.add(new JLabel("Speed (1-100):"), c);
+	    constraints.gridx = 1;
+	    constraints.gridy = 5;
+	    constraints.gridwidth = 2;
+	    constraints.gridheight = 1;
+	    constraints.weightx = constraints.weighty = 0.0;
+	    rotatePanel1.add(new JLabel("Speed (1-20):"), constraints);
 	    
-	    c.gridx = 3;
-	    c.gridy = 5;
-	    c.gridwidth = 1;
-	    c.gridheight = 1;
-	    c.weightx = c.weighty = 0.0;
-	    rotatePanel1.add(speed, c);
+	    
+	    constraints.gridx = 3;
+	    constraints.gridy = 5;
+	    constraints.gridwidth = 2;
+	    constraints.gridheight = 1;
+	    constraints.weightx = constraints.weighty = 1.0;
+	    constraints.fill = GridBagConstraints.HORIZONTAL;
+	    rotatePanel1.add(speed, constraints);
 	    
 	    
 	    
 	    /**********************************
 	     ------------BLANK SPACE-----------
 	     **********************************/
-	    c.gridx = 1;
-	    c.gridy = 6;
-	    c.gridwidth = 3;
-	    c.gridheight = 1;
-	    c.weightx = c.weighty = 1.0;
-	    rotatePanel1.add( Box.createHorizontalStrut( 8 ), c );
-	    rotatePanel1.add( Box.createVerticalStrut( 8 ), c );
+	    constraints.gridx = 1;
+	    constraints.gridy = 6;
+	    constraints.gridwidth = 3;
+	    constraints.gridheight = 1;
+	    constraints.weightx = constraints.weighty = 1.0;
+	    rotatePanel1.add( Box.createHorizontalStrut( 8 ), constraints );
+	    rotatePanel1.add( Box.createVerticalStrut( 8 ), constraints );
 	    
 	    
 	    
@@ -175,10 +251,23 @@ public class RotatePanel  {
 	    start_b.setFont(new Font("sansserif",Font.PLAIN,11));
 	    pause_b.setFont(new Font("sansserif",Font.PLAIN,11));
 	    
+	    
+	    start_b.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e)
+            {
+            	s.setNumRotations((Integer)numRotations.getValue());
+            	s.setRotationSpeed((Integer)speed.getValue());
+ 
+            	if (!((s.getXAxisRotation() == 0.0f) && (s.getYAxisRotation() == 0.0f) 
+            			&& (s.getZAxisRotation() == 0.0f)))
+            		s.animator.start();
+            } 
+        });      
+	    
 	   
 	    buttonsPanel.setLayout(new GridLayout(1,2,7,0));
-	    buttonsPanel.add(start_b, c);
-	    buttonsPanel.add(pause_b, c);
+	    buttonsPanel.add(start_b, constraints);
+	    buttonsPanel.add(pause_b, constraints);
 
 	    rotatePanel2.add(buttonsPanel, BorderLayout.PAGE_START);
 	    blankPanel.setBorder(new EmptyBorder(10, 10, 15, 10) );

@@ -32,10 +32,22 @@ public class Scene extends JFrame implements GLEventListener, KeyListener,
 
 	private float tx = 0.0f, ty = 0.0f;
 	private static final int REFRESH_FPS = 60;
-	final FPSAnimator animator;
-	private float rotationSpeed = 0.0f;
+	FPSAnimator animator;
+	//private float rotateAngle = 0.0f;
+	private int rotateAngle = 1;
+	private static int rotateSpeed;
 
 	private String curPos;
+	
+	private int numRotations = 0;
+	private float xAxisRot = 0.0f;
+	private float yAxisRot = 0.0f;
+	private float zAxisRot = 0.0f;
+	
+	private GL2 gl;
+	
+	private static float shapeSize = 1.0f;
+	//private static int rotateSpeed = 1;
 
 	
 	
@@ -198,13 +210,13 @@ public class Scene extends JFrame implements GLEventListener, KeyListener,
 		this.canvas.addMouseMotionListener(this);
 
 		animator = new FPSAnimator(canvas, REFRESH_FPS, true);
-		animator.start();
+		//animator.start();
 	}
 
 	
 	public void run() {
 		canvas.requestFocusInWindow();
-		animator.start();
+		//animator.start();
 	}
 
 	/** Commented this out, because I keep accidentally running this... :) */
@@ -219,7 +231,7 @@ public class Scene extends JFrame implements GLEventListener, KeyListener,
 /********************************** INIT *******************************/
 /***********************************************************************/	
 	public void init(GLAutoDrawable drawable) {
-		GL2 gl = drawable.getGL().getGL2();
+		gl = drawable.getGL().getGL2();
 		gl.glEnable(GL2.GL_LIGHT0);
 		gl.glDepthFunc(GL.GL_LESS);
 		gl.glEnable(GL.GL_DEPTH_TEST);
@@ -245,7 +257,7 @@ public class Scene extends JFrame implements GLEventListener, KeyListener,
 /******************************** DISPLAY ******************************/
 /***********************************************************************/
 	public void display(GLAutoDrawable drawable) {
-		GL2 gl = drawable.getGL().getGL2();
+		gl = drawable.getGL().getGL2();
 
 		gl.glClear(GL2.GL_COLOR_BUFFER_BIT | GL2.GL_DEPTH_BUFFER_BIT);
 
@@ -274,12 +286,16 @@ public class Scene extends JFrame implements GLEventListener, KeyListener,
 /******************************* DRAWSHAPE *****************************/
 /***********************************************************************/	
 	public void drawShape(GLAutoDrawable drawable) {
-		GL2 gl = drawable.getGL().getGL2();
+		gl = drawable.getGL().getGL2();
 		gl.glLoadIdentity();
 		gl.glTranslatef(tx, ty, -10.0f);
+		
+		
 
-		pyramid(drawable);
-		rotationSpeed += 1.0f;
+		pyramid(gl);
+		
+		
+		rotateAngle += 1.0f;
 	}
 	
 	
@@ -288,14 +304,34 @@ public class Scene extends JFrame implements GLEventListener, KeyListener,
 /********************************* SHAPES ******************************/
 /***********************************************************************/
 	//////////////////////////////////////////////
-	public void pyramid(GLAutoDrawable drawable) {
+	public void pyramid(GL2 gl) {
 	//////////////////////////////////////////////	
-		GL2 gl = drawable.getGL().getGL2();
-
+		//GL2 gl;
+		gl.glLoadIdentity();
+		gl.glTranslatef(tx, ty, -10.0f);
+		
 		gl.glPushMatrix();
 		
+			//scale
+			//gl.glScalef(0.5f*shapeSize, 0.5f*shapeSize, 0.5f*shapeSize);
+		   
+			//translation
+			//gl.glTranslatef(3.5f/shapeSize, 3.5f/shapeSize, 0.0f/shapeSize);
+		   
 			//rotation
-			gl.glRotatef(rotationSpeed, 0.0f, 1.0f, 0.0f);
+			gl.glRotatef((rotateAngle*rotateSpeed), xAxisRot, yAxisRot, zAxisRot);
+	   		
+
+			if ((rotateAngle*rotateSpeed) >= (360*getNumRotations()))
+			{
+		   		gl.glRotatef(-(360*getNumRotations())-(rotateAngle*rotateSpeed), 0.0f, 1.0f, 0.0f);
+				animator.stop();
+				rotateAngle = 0;
+				rotateSpeed = 0;
+			}
+			
+
+			
 	
 			// vertices
 			Point top = new Point(0.0, 1.0, 0.0);
@@ -319,7 +355,7 @@ public class Scene extends JFrame implements GLEventListener, KeyListener,
 /******************************** RESHAPE ******************************/
 /***********************************************************************/	
 	public void reshape(GLAutoDrawable drawable, int x, int y, int w, int h) {
-		GL2 gl = drawable.getGL().getGL2();
+		gl = drawable.getGL().getGL2();
 
 		gl.glViewport(0, 0, w, h);
 		gl.glMatrixMode(GL2.GL_PROJECTION);
@@ -392,7 +428,14 @@ public class Scene extends JFrame implements GLEventListener, KeyListener,
 	
 	
 	//unused
-	public void mouseClicked(MouseEvent mouse) { }
+	public void mouseClicked(MouseEvent mouse) { 
+		
+		//GLAutoDrawable.display();
+		//rotationSpeed += 50.0f;
+		animator.start();
+		//canvas.repaint();
+		
+	}
 	public void mouseEntered(MouseEvent mouse) { }
 	public void mouseExited(MouseEvent mouse) { }
 	
@@ -419,13 +462,49 @@ public class Scene extends JFrame implements GLEventListener, KeyListener,
 		this.canvas = canvas;
 	}
 
-	public float getRotationSpeed() {
-		return rotationSpeed;
+	public float getRotationAngle() {
+		return rotateAngle;
 	}
 
-	public void setRotationSpeed(float rotationSpeed) {
-		this.rotationSpeed = rotationSpeed;
+
+	public void setRotationSpeed(int rotateSpeed) {
+		this.rotateSpeed = rotateSpeed;
 	}
+	
+	
+	public int getNumRotations() {
+		return numRotations;
+	}
+
+	public void setNumRotations(int numRotations) {
+		this.numRotations = numRotations;
+	}
+	
+	
+	public float getXAxisRotation() {
+		return xAxisRot;
+	}
+	
+	public void setXAxisRotation(float xAxisRot) {
+		this.xAxisRot = xAxisRot;
+	}
+	
+	public float getYAxisRotation() {
+		return yAxisRot;
+	}
+	
+	public void setYAxisRotation(float yAxisRot) {
+		this.yAxisRot = yAxisRot;
+	}
+	
+	public float getZAxisRotation() {
+		return zAxisRot;
+	}
+	
+	public void setZAxisRotation(float zAxisRot) {
+		this.zAxisRot = zAxisRot;
+	}
+	
 	
 	/*************** Mouse cursor ****************/
 	public String getCurPos() {

@@ -10,6 +10,7 @@ import java.awt.Insets;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 
+import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JCheckBox;
@@ -19,8 +20,10 @@ import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JSpinner;
 import javax.swing.JTextField;
 import javax.swing.ListSelectionModel;
+import javax.swing.SpinnerListModel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.LineBorder;
 import javax.swing.event.ListSelectionEvent;
@@ -58,9 +61,38 @@ public class ResizePanel implements ListSelectionListener  {
 	    bottomPanel.setBorder(new EmptyBorder(0, 10, 10, 10) );
 	    
 	    
-	    JTextField height = new JTextField();
-	    JTextField width = new JTextField();
-	    JTextField depth = new JTextField();
+	    Integer[] list = new Integer[30];
+	    for (int i = 0; i < 30; i++)
+	    {
+	    	list[i] = i+1;
+	    }
+	    
+	    
+	    //JComboBox height = new JComboBox(list);
+	    SpinnerListModel heightModel = new SpinnerListModel(list);
+	    SpinnerListModel widthModel = new SpinnerListModel(list);
+	    SpinnerListModel depthModel = new SpinnerListModel(list);
+
+	    
+	    JSpinner height = new JSpinner(heightModel);
+	    height.setValue(10);
+	    ((JSpinner.DefaultEditor)height.getEditor()).getTextField().setEditable(false); 
+	    height.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.GRAY));
+
+	    
+	    JSpinner width = new JSpinner(widthModel);
+	    width.setValue(10);
+	    ((JSpinner.DefaultEditor)width.getEditor()).getTextField().setEditable(false); 
+	    width.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.GRAY));
+
+	    
+	    JSpinner depth = new JSpinner(depthModel);
+	    depth.setValue(10);
+	    ((JSpinner.DefaultEditor)depth.getEditor()).getTextField().setEditable(false); 
+	    depth.setBorder(BorderFactory.createMatteBorder(1, 1, 1, 1, Color.GRAY));
+
+	    
+	    
 	    
 
 	    leftPanel.add(new JLabel("Height:"));
