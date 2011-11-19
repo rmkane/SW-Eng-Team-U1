@@ -20,7 +20,10 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+<<<<<<< HEAD
 import java.util.Hashtable;
+=======
+>>>>>>> 7d94a626b5132257c7b7f60b53d2a533f06dca00
 
 import javax.media.opengl.awt.GLCanvas;
 import javax.swing.Box;
@@ -33,7 +36,10 @@ import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+<<<<<<< HEAD
 import javax.swing.JSlider;
+=======
+>>>>>>> 7d94a626b5132257c7b7f60b53d2a533f06dca00
 import javax.swing.JTextArea;
 import javax.swing.JToolBar;
 import javax.swing.border.EmptyBorder;
@@ -43,7 +49,11 @@ public class GUI extends JPanel implements MouseListener, MouseMotionListener  {
 
 	private static final long serialVersionUID = 1L;
 
+<<<<<<< HEAD
 	private static Scene s;
+=======
+	private Scene s;
+>>>>>>> 7d94a626b5132257c7b7f60b53d2a533f06dca00
 	private GLCanvas c;
 	private JFrame frame;
 	
@@ -61,7 +71,11 @@ public class GUI extends JPanel implements MouseListener, MouseMotionListener  {
 	private JButton cube_b, triprism_b, pyramid_b, cylinder_b, sphere_b,
 			hexprism_b, line_b;
 	private JTextArea logText;
+<<<<<<< HEAD
 	private JLabel statusBar;
+=======
+	private JLabel statusbar;
+>>>>>>> 7d94a626b5132257c7b7f60b53d2a533f06dca00
 
 	
 	public GUI() {
@@ -214,6 +228,7 @@ public class GUI extends JPanel implements MouseListener, MouseMotionListener  {
 		mainPanel.add(centerPanel, BorderLayout.CENTER);
 
 		centerPanel.add(c, BorderLayout.CENTER);
+<<<<<<< HEAD
 		frame.setVisible(true);
 		
 
@@ -247,6 +262,26 @@ public class GUI extends JPanel implements MouseListener, MouseMotionListener  {
         statusBar.setPreferredSize(new Dimension(-1, 22));
         statusBar.setBorder(LineBorder.createGrayLineBorder());
 		mainPanel.add(statusBar, BorderLayout.PAGE_END);
+=======
+
+		frame.setVisible(true);
+
+		logText = new JTextArea(); // **LOGGER PANEL**
+		logText.setBorder(LineBorder.createGrayLineBorder());
+		logText.setPreferredSize(new Dimension(0, 150));
+
+
+		
+		centerPanel.add(logText, BorderLayout.PAGE_END);
+
+		
+		statusbar = new JLabel();
+		statusbar.setText(" Cursor Position:  |  Selected: x  |  Total Shapes: x");
+
+		statusbar.setPreferredSize(new Dimension(-1, 22));
+		statusbar.setBorder(LineBorder.createGrayLineBorder());
+		mainPanel.add(statusbar, BorderLayout.PAGE_END);
+>>>>>>> 7d94a626b5132257c7b7f60b53d2a533f06dca00
 
 	}
 
@@ -333,22 +368,38 @@ public class GUI extends JPanel implements MouseListener, MouseMotionListener  {
 	}
 
 	public JLabel getStatusbar() {
+<<<<<<< HEAD
 		return statusBar;
 	}
 
 	public void setStatusbar(JLabel statusbar) {
 		this.statusBar = statusBar;
+=======
+		return statusbar;
+	}
+
+	public void setStatusbar(JLabel statusbar) {
+		this.statusbar = statusbar;
+>>>>>>> 7d94a626b5132257c7b7f60b53d2a533f06dca00
 	}
 
 	
 	
 	public void mouseDragged(MouseEvent arg0) {
+<<<<<<< HEAD
 		statusBar.setText(" Cursor Position: " + s.getCurPos() + "  |  Selected: x  |  Total Shapes: x");
+=======
+		statusbar.setText(" Cursor Position: " + s.getCurPos() + "  |  Selected: x  |  Total Shapes: x");
+>>>>>>> 7d94a626b5132257c7b7f60b53d2a533f06dca00
 	}
 		
 	
 	public void mouseMoved(MouseEvent e){
+<<<<<<< HEAD
 		statusBar.setText(" Cursor Position: " + s.getCurPos() + "  |  Selected: x  |  Total Shapes: x");
+=======
+		statusbar.setText(" Cursor Position: " + s.getCurPos() + "  |  Selected: x  |  Total Shapes: x");
+>>>>>>> 7d94a626b5132257c7b7f60b53d2a533f06dca00
 	}
 	
 	
@@ -357,10 +408,13 @@ public class GUI extends JPanel implements MouseListener, MouseMotionListener  {
 	public void mouseExited(MouseEvent arg0) { }
 	public void mousePressed(MouseEvent arg0) { }
 	public void mouseReleased(MouseEvent e) { }	
+<<<<<<< HEAD
 	
 	
 	public static Scene getScene()
 	{
 		return s;
 	}
+=======
+>>>>>>> 7d94a626b5132257c7b7f60b53d2a533f06dca00
 }
