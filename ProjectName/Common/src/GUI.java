@@ -284,10 +284,11 @@ public class GUI extends JPanel implements MouseListener, MouseMotionListener {
 
 		logText = new JTextArea(); // **LOGGER PANEL**
 		logText.setLineWrap(true);
+		logText.setBorder(LineBorder.createGrayLineBorder());
 		logScroll = new JScrollPane(logText);
 		logScroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-		logText.setBorder(LineBorder.createGrayLineBorder());
-		logText.setPreferredSize(new Dimension(0, 150));
+		
+		logScroll.setPreferredSize(new Dimension(0, 150));
 
 		zoom = new JSlider(JSlider.HORIZONTAL, 5, 200, 100);
 

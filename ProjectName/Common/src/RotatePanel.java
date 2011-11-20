@@ -34,7 +34,7 @@ import javax.swing.event.ChangeListener;
 
 
 
-public class RotatePanel  {
+public class RotatePanel {
 	
     JPanel buttonsPanel = new JPanel();
     JPanel blankPanel = new JPanel();
@@ -256,7 +256,7 @@ public class RotatePanel  {
             public void actionPerformed(ActionEvent e)
             {
             	s.setNumRotations((Integer)numRotations.getValue());
-            	s.setRotationSpeed((Integer)speed.getValue());
+            	s.setRotationSpeed((Integer)speed.getValue()*0.2);
  
             	if (!((s.getXAxisRotation() == 0.0f) && (s.getYAxisRotation() == 0.0f) 
             			&& (s.getZAxisRotation() == 0.0f)))

@@ -32,7 +32,7 @@ public class Scene extends JFrame implements GLEventListener, KeyListener,
 	FPSAnimator animator;
 	// private float rotateAngle = 0.0f;
 	private int rotateAngle = 1;
-	private static int rotateSpeed;
+	private static double rotateSpeed;
 
 	private String curPos;
 
@@ -298,11 +298,11 @@ public class Scene extends JFrame implements GLEventListener, KeyListener,
 		// gl.glTranslatef(3.5f/shapeSize, 3.5f/shapeSize, 0.0f/shapeSize);
 
 		// rotation
-		gl.glRotatef((rotateAngle * rotateSpeed), xAxisRot, yAxisRot, zAxisRot);
+		gl.glRotatef((float) (rotateAngle * rotateSpeed), xAxisRot, yAxisRot, zAxisRot);
 
 		if ((rotateAngle * rotateSpeed) >= (360 * getNumRotations())) {
-			gl.glRotatef(-(360 * getNumRotations())
-					- (rotateAngle * rotateSpeed), 0.0f, 1.0f, 0.0f);
+			gl.glRotatef((float) (-(360 * getNumRotations())
+					- (rotateAngle * rotateSpeed)), 0.0f, 1.0f, 0.0f);
 			animator.stop();
 			rotateAngle = 0;
 			rotateSpeed = 0;
@@ -445,7 +445,7 @@ public class Scene extends JFrame implements GLEventListener, KeyListener,
 		return rotateAngle;
 	}
 
-	public void setRotationSpeed(int rotateSpeed) {
+	public void setRotationSpeed(double rotateSpeed) {
 		this.rotateSpeed = rotateSpeed;
 	}
 
